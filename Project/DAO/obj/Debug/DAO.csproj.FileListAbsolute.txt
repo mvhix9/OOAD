@@ -1,0 +1,13 @@
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\DAO.dll
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\DAO.pdb
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\DTO.dll
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\EntityFramework.dll
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\EntityFramework.SqlServer.dll
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\DTO.pdb
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\EntityFramework.xml
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\EntityFramework.SqlServer.xml
+E:\IT\C#\Windows Forms\Project\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+E:\IT\C#\Windows Forms\Project\DAO\obj\Debug\DAO.dll
+E:\IT\C#\Windows Forms\Project\DAO\obj\Debug\DAO.pdb
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\Common.dll
+E:\IT\C#\Windows Forms\Project\DAO\bin\Debug\Common.pdb
