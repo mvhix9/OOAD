@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace Demo.NhanVien
 {
-    public partial class Button1UC : UserControl
+    public partial class QLNhanVienUC : UserControl
     {
-        public Button1UC()
+        public QLNhanVienUC()
         {
             InitializeComponent();
+        }
+
+        private void QLNhanVienUC_Load(object sender, EventArgs e)
+        {
+            nhanVienBindingSource.DataSource = NhanVienServices.GetAll();
         }
     }
 }

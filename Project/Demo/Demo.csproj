@@ -59,11 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NhanVien\Button1UC.cs">
+    <Compile Include="NhanVien\QLNhanVienUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NhanVien\Button1UC.Designer.cs">
-      <DependentUpon>Button1UC.cs</DependentUpon>
+    <Compile Include="NhanVien\QLNhanVienUC.Designer.cs">
+      <DependentUpon>QLNhanVienUC.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien\NhanVienFRM.cs">
       <SubType>Form</SubType>
@@ -85,8 +85,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NhanVien\Button1UC.resx">
-      <DependentUpon>Button1UC.cs</DependentUpon>
+    <EmbeddedResource Include="NhanVien\QLNhanVienUC.resx">
+      <DependentUpon>QLNhanVienUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\IndexUC.resx">
       <DependentUpon>IndexUC.cs</DependentUpon>
@@ -106,6 +106,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\DTO.NhanVien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,6 +144,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{cb2a9451-f23a-4265-8e03-000a174887b7}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{2d7a40ce-5a96-40b8-9218-1e192e4e3a06}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{30786b5e-80e3-4873-b56b-18134cada558}</Project>

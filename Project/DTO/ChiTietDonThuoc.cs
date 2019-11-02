@@ -12,15 +12,15 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class ChiTietDonThuoc
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public byte[] Password { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public int RoleId { get; set; }
+        public int SoThuTu { get; set; }
+        public Nullable<int> MaThuoc { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<double> ThanhTien { get; set; }
+        public Nullable<int> MaDonThuoc { get; set; }
     
-        public virtual Role Role { get; set; }
+        public virtual DonThuoc DonThuoc { get; set; }
+        public virtual Thuoc Thuoc { get; set; }
     }
 }

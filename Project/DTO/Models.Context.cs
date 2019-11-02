@@ -13,10 +13,10 @@ namespace DTO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SchoolEntities : DbContext
+    public partial class QuanLyPhongMachEntities : DbContext
     {
-        public SchoolEntities()
-            : base("name=SchoolEntities")
+        public QuanLyPhongMachEntities()
+            : base("name=QuanLyPhongMachEntities")
         {
         }
     
@@ -25,8 +25,14 @@ namespace DTO
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Benh> Benhs { get; set; }
+        public virtual DbSet<BenhNhan> BenhNhans { get; set; }
+        public virtual DbSet<ChiTietDonThuoc> ChiTietDonThuocs { get; set; }
+        public virtual DbSet<DonThuoc> DonThuocs { get; set; }
+        public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<PhieuKham> PhieuKhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Thuoc> Thuocs { get; set; }
+        public virtual DbSet<VaiTro> VaiTroes { get; set; }
     }
 }

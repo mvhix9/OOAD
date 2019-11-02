@@ -17,7 +17,26 @@ namespace Demo.NhanVien
         {
             InitializeComponent();
         }
+        #region Demochangepanel
+        //static nhanvienfrm obj;
+        //public static nhanvienfrm instance
+        //{
+        //    get
+        //    {
+        //        if (obj == null)
+        //        {
+        //            obj = new nhanvienfrm();
+        //        }
+        //        return obj;
+        //    }
+        //}
 
+        //public panel contentpanel
+        //{
+        //    get { return contentpanel; }
+        //    set { contentpanel = value; }
+        //}
+        #endregion
         private void NhanVienFRM_Load(object sender, EventArgs e)
         {
             this.Select();
@@ -25,6 +44,7 @@ namespace Demo.NhanVien
             lblRole.Text = UserCache.Role;
             btnIndex.selected = true;
             btnIndex_Click(sender, e);
+            //obj = this;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -81,8 +101,15 @@ namespace Demo.NhanVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            moveActivePanel(button1);
-            loadUserControl(contentPanel, new Button1UC());
+            moveActivePanel(btnQLNV);
+            loadUserControl(contentPanel, new QLNhanVienUC());
+            //if(!nhanvienfrm.instance.contentpanel.controls.containskey("qlnhanvien"))
+            //{
+            //    qlnhanvien panel = new qlnhanvien();
+            //    panel.dock = dockstyle.fill;
+            //    nhanvienfrm.instance.contentpanel.controls.add(panel);
+            //}
+            //nhanvienfrm.instance.contentpanel.controls["qlnhanvien"].bringtofront();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -96,5 +123,6 @@ namespace Demo.NhanVien
            
             moveActivePanel(button3);
         }
+
     }
 }

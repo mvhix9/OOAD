@@ -12,10 +12,9 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Benh
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public int MaBenh { get; set; }
+        public string TenBenh { get; set; }
     }
 }

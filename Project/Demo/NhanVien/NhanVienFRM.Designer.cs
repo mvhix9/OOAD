@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation16 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVienFRM));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.topPanel = new System.Windows.Forms.Panel();
@@ -43,7 +43,7 @@
             this.activePanel = new System.Windows.Forms.Panel();
             this.button3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.button2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnQLNV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnIndex = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -175,7 +175,7 @@
             this.menuPanel.Controls.Add(this.activePanel);
             this.menuPanel.Controls.Add(this.button3);
             this.menuPanel.Controls.Add(this.button2);
-            this.menuPanel.Controls.Add(this.button1);
+            this.menuPanel.Controls.Add(this.btnQLNV);
             this.menuPanel.Controls.Add(this.btnIndex);
             this.menuPanel.Controls.Add(this.lblRole);
             this.menuPanel.Controls.Add(this.lblName);
@@ -278,44 +278,44 @@
             this.button2.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnQLNV
             // 
-            this.button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.BorderRadius = 0;
-            this.button1.ButtonText = "BUTTON 1";
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
-            this.button1.DisabledColor = System.Drawing.Color.Gray;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Iconcolor = System.Drawing.Color.Transparent;
-            this.button1.Iconimage = null;
-            this.button1.Iconimage_right = null;
-            this.button1.Iconimage_right_Selected = null;
-            this.button1.Iconimage_Selected = null;
-            this.button1.IconMarginLeft = 0;
-            this.button1.IconMarginRight = 0;
-            this.button1.IconRightVisible = true;
-            this.button1.IconRightZoom = 0D;
-            this.button1.IconVisible = true;
-            this.button1.IconZoom = 90D;
-            this.button1.IsTab = true;
-            this.button1.Location = new System.Drawing.Point(0, 267);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.button1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
-            this.button1.OnHoverTextColor = System.Drawing.Color.White;
-            this.button1.selected = false;
-            this.button1.Size = new System.Drawing.Size(240, 81);
-            this.button1.TabIndex = 12;
-            this.button1.TabStop = false;
-            this.button1.Text = "BUTTON 1";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button1.Textcolor = System.Drawing.Color.White;
-            this.button1.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnQLNV.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnQLNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.btnQLNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLNV.BorderRadius = 0;
+            this.btnQLNV.ButtonText = "QLNV(Demo)";
+            this.btnQLNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnQLNV, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLNV.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLNV.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLNV.Iconimage = null;
+            this.btnQLNV.Iconimage_right = null;
+            this.btnQLNV.Iconimage_right_Selected = null;
+            this.btnQLNV.Iconimage_Selected = null;
+            this.btnQLNV.IconMarginLeft = 0;
+            this.btnQLNV.IconMarginRight = 0;
+            this.btnQLNV.IconRightVisible = true;
+            this.btnQLNV.IconRightZoom = 0D;
+            this.btnQLNV.IconVisible = true;
+            this.btnQLNV.IconZoom = 90D;
+            this.btnQLNV.IsTab = true;
+            this.btnQLNV.Location = new System.Drawing.Point(0, 267);
+            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLNV.Name = "btnQLNV";
+            this.btnQLNV.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.btnQLNV.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnQLNV.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLNV.selected = false;
+            this.btnQLNV.Size = new System.Drawing.Size(240, 81);
+            this.btnQLNV.TabIndex = 12;
+            this.btnQLNV.TabStop = false;
+            this.btnQLNV.Text = "QLNV(Demo)";
+            this.btnQLNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLNV.Textcolor = System.Drawing.Color.White;
+            this.btnQLNV.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQLNV.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnIndex
             // 
@@ -464,22 +464,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.bunifuTransition1.Cursor = null;
-            animation16.AnimateOnlyDifferences = true;
-            animation16.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.BlindCoeff")));
-            animation16.LeafCoeff = 0F;
-            animation16.MaxTime = 1F;
-            animation16.MinTime = 0F;
-            animation16.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicCoeff")));
-            animation16.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicShift")));
-            animation16.MosaicSize = 0;
-            animation16.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation16.RotateCoeff = 0F;
-            animation16.RotateLimit = 0F;
-            animation16.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.ScaleCoeff")));
-            animation16.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.SlideCoeff")));
-            animation16.TimeCoeff = 0F;
-            animation16.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation16;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // NhanVienFRM
             // 
@@ -532,7 +532,7 @@
         private System.Windows.Forms.Label lblRole;
         private Bunifu.Framework.UI.BunifuFlatButton btnIndex;
         private Bunifu.Framework.UI.BunifuFlatButton button2;
-        private Bunifu.Framework.UI.BunifuFlatButton button1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnQLNV;
         private Bunifu.Framework.UI.BunifuFlatButton button3;
         private System.Windows.Forms.Panel activePanel;
     }

@@ -12,19 +12,21 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class Role
+    public partial class BenhNhan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Role()
+        public BenhNhan()
         {
-            this.Users = new HashSet<User>();
+            this.PhieuKhams = new HashSet<PhieuKham>();
         }
     
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int MaBenhNhan { get; set; }
+        public string HoTen { get; set; }
+        public string GioiTinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string DiaChi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<PhieuKham> PhieuKhams { get; set; }
     }
 }
