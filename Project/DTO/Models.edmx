@@ -37,6 +37,7 @@ warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a p
           <Property Name="SoLuong" Type="int" />
           <Property Name="ThanhTien" Type="float" />
           <Property Name="MaDonThuoc" Type="int" />
+          <Property Name="CachDung" Type="nvarchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="DonThuoc">
           <Key>
@@ -86,6 +87,8 @@ warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a p
           <Property Name="MaThuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenThuoc" Type="nvarchar" MaxLength="100" />
           <Property Name="DonGia" Type="float" />
+          <Property Name="SoLuongTon" Type="int" />
+          <Property Name="DonVi" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="VaiTro">
           <Key>
@@ -239,6 +242,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="ThanhTien" Type="Double" />
           <Property Name="MaDonThuoc" Type="Int32" />
+          <Property Name="CachDung" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DonThuoc" Relationship="Self.FK_ChiTietDonThuoc_MaDonThuoc" FromRole="ChiTietDonThuoc" ToRole="DonThuoc" />
           <NavigationProperty Name="Thuoc" Relationship="Self.FK_ChiTietDonThuoc_MaThuoc" FromRole="ChiTietDonThuoc" ToRole="Thuoc" />
         </EntityType>
@@ -297,6 +301,8 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <Property Name="MaThuoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenThuoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Double" />
+          <Property Name="SoLuongTon" Type="Int32" />
+          <Property Name="DonVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChiTietDonThuocs" Relationship="Self.FK_ChiTietDonThuoc_MaThuoc" FromRole="Thuoc" ToRole="ChiTietDonThuoc" />
         </EntityType>
         <EntityType Name="VaiTro">
@@ -447,6 +453,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
                 <ScalarProperty Name="MaDonThuoc" ColumnName="MaDonThuoc" />
+                <ScalarProperty Name="CachDung" ColumnName="CachDung" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -501,6 +508,8 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
                 <ScalarProperty Name="MaThuoc" ColumnName="MaThuoc" />
                 <ScalarProperty Name="TenThuoc" ColumnName="TenThuoc" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />
+                <ScalarProperty Name="DonVi" ColumnName="DonVi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

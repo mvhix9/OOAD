@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CNPM\Exercise\Demo\Demo3TierWinForm\DAO\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,9 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NhanVienServices.cs" />
+    <Compile Include="Interface\IBenhNhanServices.cs" />
+    <Compile Include="Interface\INhanVienServices.cs" />
+    <Compile Include="Interface\IPhieuKhamServices.cs" />
+    <Compile Include="Interface\IServices.cs" />
+    <Compile Include="Interface\IThuocServices.cs" />
+    <Compile Include="Interface\IVaiTroServices.cs" />
+    <Compile Include="Services\BenhNhanServices.cs" />
+    <Compile Include="Services\NhanVienServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserServices.cs" />
+    <Compile Include="Services\PhieuKhamServices.cs" />
+    <Compile Include="Services\Services.cs" />
+    <Compile Include="Services\ThuocServices.cs" />
+    <Compile Include="Services\VaiTroServices.cs" />
+    <Compile Include="Services\UserServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

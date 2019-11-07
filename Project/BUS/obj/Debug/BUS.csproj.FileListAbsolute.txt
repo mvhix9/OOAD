@@ -18,7 +18,6 @@ E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\bin\Debug\DTO.dll
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\bin\Debug\EntityFramework.dll
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\bin\Debug\DAO.pdb
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\bin\Debug\DTO.pdb
-E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\bin\Debug\EntityFramework.xml
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\obj\Debug\BUS.dll
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\BUS\obj\Debug\BUS.pdb

@@ -19,6 +19,7 @@ namespace DTO
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> ThanhTien { get; set; }
         public Nullable<int> MaDonThuoc { get; set; }
+        public string CachDung { get; set; }
     
         public virtual DonThuoc DonThuoc { get; set; }
         public virtual Thuoc Thuoc { get; set; }

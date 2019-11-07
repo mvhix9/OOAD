@@ -1,9 +1,10 @@
-﻿using Demo.NhanVien;
+﻿using Demo.uiNhanVien;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using uiBacSi;
 
 namespace Demo
 {
@@ -19,8 +20,9 @@ namespace Demo
                 SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanVienFRM());
+            //Application.Run(new NhanVienFRM());
             //Application.Run(new MainFRM());
+            Application.Run(new BACSIFRM());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
