@@ -6,6 +6,7 @@
     </Key>
     <Property Name="MaBenh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenBenh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaBenh" FromRole="Benh" ToRole="ChiTietBenh" />
   </EntityType>
   <EntityType Name="BenhNhan">
     <Key>
@@ -17,6 +18,16 @@
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PhieuKhams" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="BenhNhan" ToRole="PhieuKham" />
+  </EntityType>
+  <EntityType Name="ChiTietBenh">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPhieuKham" Type="Int32" />
+    <Property Name="MaBenh" Type="Int32" />
+    <NavigationProperty Name="Benh" Relationship="Self.FK_ChiTietBenh_MaBenh" FromRole="ChiTietBenh" ToRole="Benh" />
+    <NavigationProperty Name="PhieuKham" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="ChiTietBenh" ToRole="PhieuKham" />
   </EntityType>
   <EntityType Name="ChiTietDonThuoc">
     <Key>
@@ -66,6 +77,7 @@
     <Property Name="TrieuChung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NgayKham" Type="DateTime" Precision="0" />
     <NavigationProperty Name="BenhNhan" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="PhieuKham" ToRole="BenhNhan" />
+    <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="PhieuKham" ToRole="ChiTietBenh" />
     <NavigationProperty Name="DonThuocs" Relationship="Self.FK_DonThuoc_MaPhieuKham" FromRole="PhieuKham" ToRole="DonThuoc" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_PhieuKham_MaNhanVien" FromRole="PhieuKham" ToRole="NhanVien" />
   </EntityType>
@@ -98,6 +110,18 @@
     <Property Name="TenVaiTro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="NhanViens" Relationship="Self.FK_NhanVien_MaVaiTro" FromRole="VaiTro" ToRole="NhanVien" />
   </EntityType>
+  <Association Name="FK_ChiTietBenh_MaBenh">
+    <End Role="Benh" Type="Self.Benh" Multiplicity="0..1" />
+    <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Benh">
+        <PropertyRef Name="MaBenh" />
+      </Principal>
+      <Dependent Role="ChiTietBenh">
+        <PropertyRef Name="MaBenh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_PhieuKham_MaBenhNhan">
     <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="0..1" />
     <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
@@ -107,6 +131,18 @@
       </Principal>
       <Dependent Role="PhieuKham">
         <PropertyRef Name="MaBenhNhan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietBenh_MaPhieuKham">
+    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+    <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuKham">
+        <PropertyRef Name="MaPhieuKham" />
+      </Principal>
+      <Dependent Role="ChiTietBenh">
+        <PropertyRef Name="MaPhieuKham" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -173,6 +209,7 @@
   <EntityContainer Name="QuanLyPhongMachEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Benhs" EntityType="Self.Benh" />
     <EntitySet Name="BenhNhans" EntityType="Self.BenhNhan" />
+    <EntitySet Name="ChiTietBenhs" EntityType="Self.ChiTietBenh" />
     <EntitySet Name="ChiTietDonThuocs" EntityType="Self.ChiTietDonThuoc" />
     <EntitySet Name="DonThuocs" EntityType="Self.DonThuoc" />
     <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
@@ -180,9 +217,17 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="Thuocs" EntityType="Self.Thuoc" />
     <EntitySet Name="VaiTroes" EntityType="Self.VaiTro" />
+    <AssociationSet Name="FK_ChiTietBenh_MaBenh" Association="Self.FK_ChiTietBenh_MaBenh">
+      <End Role="Benh" EntitySet="Benhs" />
+      <End Role="ChiTietBenh" EntitySet="ChiTietBenhs" />
+    </AssociationSet>
     <AssociationSet Name="FK_PhieuKham_MaBenhNhan" Association="Self.FK_PhieuKham_MaBenhNhan">
       <End Role="BenhNhan" EntitySet="BenhNhans" />
       <End Role="PhieuKham" EntitySet="PhieuKhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietBenh_MaPhieuKham" Association="Self.FK_ChiTietBenh_MaPhieuKham">
+      <End Role="PhieuKham" EntitySet="PhieuKhams" />
+      <End Role="ChiTietBenh" EntitySet="ChiTietBenhs" />
     </AssociationSet>
     <AssociationSet Name="FK_ChiTietDonThuoc_MaDonThuoc" Association="Self.FK_ChiTietDonThuoc_MaDonThuoc">
       <End Role="DonThuoc" EntitySet="DonThuocs" />

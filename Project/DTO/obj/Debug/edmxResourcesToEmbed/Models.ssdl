@@ -17,12 +17,14 @@
     <Property Name="NgaySinh" Type="date" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="ChiTietBenh">
-          <Property Name="MaPhieuKham" Type="int" />
-          <Property Name="MaBenh" Type="int" />
-        </EntityType>-->
+  <EntityType Name="ChiTietBenh">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaPhieuKham" Type="int" />
+    <Property Name="MaBenh" Type="int" />
+  </EntityType>
   <EntityType Name="ChiTietDonThuoc">
     <Key>
       <PropertyRef Name="SoThuTu" />
@@ -92,12 +94,30 @@ warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a p
     <Property Name="MaVaiTro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenVaiTro" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_ChiTietBenh_MaBenh" />-->
-  <!--Errors Found During Generation:
-error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_ChiTietBenh_MaPhieuKham" />-->
+  <Association Name="FK_ChiTietBenh_MaBenh">
+    <End Role="Benh" Type="Self.Benh" Multiplicity="0..1" />
+    <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Benh">
+        <PropertyRef Name="MaBenh" />
+      </Principal>
+      <Dependent Role="ChiTietBenh">
+        <PropertyRef Name="MaBenh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietBenh_MaPhieuKham">
+    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+    <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuKham">
+        <PropertyRef Name="MaPhieuKham" />
+      </Principal>
+      <Dependent Role="ChiTietBenh">
+        <PropertyRef Name="MaPhieuKham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ChiTietDonThuoc_MaDonThuoc">
     <End Role="DonThuoc" Type="Self.DonThuoc" Multiplicity="0..1" />
     <End Role="ChiTietDonThuoc" Type="Self.ChiTietDonThuoc" Multiplicity="*" />
@@ -173,6 +193,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
   <EntityContainer Name="QuanLyPhongMachModelStoreContainer">
     <EntitySet Name="Benh" EntityType="Self.Benh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietBenh" EntityType="Self.ChiTietBenh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietDonThuoc" EntityType="Self.ChiTietDonThuoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DonThuoc" EntityType="Self.DonThuoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
@@ -180,6 +201,14 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Thuoc" EntityType="Self.Thuoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VaiTro" EntityType="Self.VaiTro" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChiTietBenh_MaBenh" Association="Self.FK_ChiTietBenh_MaBenh">
+      <End Role="Benh" EntitySet="Benh" />
+      <End Role="ChiTietBenh" EntitySet="ChiTietBenh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietBenh_MaPhieuKham" Association="Self.FK_ChiTietBenh_MaPhieuKham">
+      <End Role="PhieuKham" EntitySet="PhieuKham" />
+      <End Role="ChiTietBenh" EntitySet="ChiTietBenh" />
+    </AssociationSet>
     <AssociationSet Name="FK_ChiTietDonThuoc_MaDonThuoc" Association="Self.FK_ChiTietDonThuoc_MaDonThuoc">
       <End Role="DonThuoc" EntitySet="DonThuoc" />
       <End Role="ChiTietDonThuoc" EntitySet="ChiTietDonThuoc" />

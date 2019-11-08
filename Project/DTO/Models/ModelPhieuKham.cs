@@ -18,6 +18,8 @@ namespace DTO.Models
         public string TenBN { get; set; }
         public string TenNV { get; set; }
         public string TrieuChung { get; set; }
+        //public IEnumerable<ChiTietBenhs>
         public DateTime? NgayKham { get; set; }
+        
     }
 }

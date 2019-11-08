@@ -70,7 +70,7 @@ namespace uiNhanVien
             txtMaBN.Text = bn.MaBenhNhan.ToString();
             txtDiaChi.Text = bn.DiaChi;
             cbGioiTinh.Text = bn.GioiTinh;
-            dtpNgaySinh.Value = bn.NgaySinh;
+            dtpNgaySinh.Value = (DateTime) bn.NgaySinh;
         }
     }
 }

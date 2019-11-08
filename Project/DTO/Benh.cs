@@ -14,7 +14,16 @@ namespace DTO
     
     public partial class Benh
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Benh()
+        {
+            this.ChiTietBenhs = new HashSet<ChiTietBenh>();
+        }
+    
         public int MaBenh { get; set; }
         public string TenBenh { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietBenh> ChiTietBenhs { get; set; }
     }
 }

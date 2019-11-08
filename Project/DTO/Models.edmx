@@ -22,12 +22,14 @@
           <Property Name="NgaySinh" Type="date" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="ChiTietBenh">
+          <Key>
+            <PropertyRef Name="STT" />
+          </Key>
+          <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaPhieuKham" Type="int" />
           <Property Name="MaBenh" Type="int" />
-        </EntityType>-->
+        </EntityType>
         <EntityType Name="ChiTietDonThuoc">
           <Key>
             <PropertyRef Name="SoThuTu" />
@@ -97,12 +99,30 @@ warning 6013: The table/view 'QuanLyPhongMach.dbo.ChiTietBenh' does not have a p
           <Property Name="MaVaiTro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenVaiTro" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_ChiTietBenh_MaBenh" />-->
-        <!--Errors Found During Generation:
-error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_ChiTietBenh_MaPhieuKham" />-->
+        <Association Name="FK_ChiTietBenh_MaBenh">
+          <End Role="Benh" Type="Self.Benh" Multiplicity="0..1" />
+          <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Benh">
+              <PropertyRef Name="MaBenh" />
+            </Principal>
+            <Dependent Role="ChiTietBenh">
+              <PropertyRef Name="MaBenh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietBenh_MaPhieuKham">
+          <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+          <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuKham">
+              <PropertyRef Name="MaPhieuKham" />
+            </Principal>
+            <Dependent Role="ChiTietBenh">
+              <PropertyRef Name="MaPhieuKham" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ChiTietDonThuoc_MaDonThuoc">
           <End Role="DonThuoc" Type="Self.DonThuoc" Multiplicity="0..1" />
           <End Role="ChiTietDonThuoc" Type="Self.ChiTietDonThuoc" Multiplicity="*" />
@@ -178,6 +198,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
         <EntityContainer Name="QuanLyPhongMachModelStoreContainer">
           <EntitySet Name="Benh" EntityType="Self.Benh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChiTietBenh" EntityType="Self.ChiTietBenh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChiTietDonThuoc" EntityType="Self.ChiTietDonThuoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DonThuoc" EntityType="Self.DonThuoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
@@ -185,6 +206,14 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Thuoc" EntityType="Self.Thuoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VaiTro" EntityType="Self.VaiTro" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ChiTietBenh_MaBenh" Association="Self.FK_ChiTietBenh_MaBenh">
+            <End Role="Benh" EntitySet="Benh" />
+            <End Role="ChiTietBenh" EntitySet="ChiTietBenh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietBenh_MaPhieuKham" Association="Self.FK_ChiTietBenh_MaPhieuKham">
+            <End Role="PhieuKham" EntitySet="PhieuKham" />
+            <End Role="ChiTietBenh" EntitySet="ChiTietBenh" />
+          </AssociationSet>
           <AssociationSet Name="FK_ChiTietDonThuoc_MaDonThuoc" Association="Self.FK_ChiTietDonThuoc_MaDonThuoc">
             <End Role="DonThuoc" EntitySet="DonThuoc" />
             <End Role="ChiTietDonThuoc" EntitySet="ChiTietDonThuoc" />
@@ -221,6 +250,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           </Key>
           <Property Name="MaBenh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenBenh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaBenh" FromRole="Benh" ToRole="ChiTietBenh" />
         </EntityType>
         <EntityType Name="BenhNhan">
           <Key>
@@ -232,6 +262,16 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PhieuKhams" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="BenhNhan" ToRole="PhieuKham" />
+        </EntityType>
+        <EntityType Name="ChiTietBenh">
+          <Key>
+            <PropertyRef Name="STT" />
+          </Key>
+          <Property Name="STT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPhieuKham" Type="Int32" />
+          <Property Name="MaBenh" Type="Int32" />
+          <NavigationProperty Name="Benh" Relationship="Self.FK_ChiTietBenh_MaBenh" FromRole="ChiTietBenh" ToRole="Benh" />
+          <NavigationProperty Name="PhieuKham" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="ChiTietBenh" ToRole="PhieuKham" />
         </EntityType>
         <EntityType Name="ChiTietDonThuoc">
           <Key>
@@ -281,6 +321,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <Property Name="TrieuChung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NgayKham" Type="DateTime" Precision="0" />
           <NavigationProperty Name="BenhNhan" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="PhieuKham" ToRole="BenhNhan" />
+          <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="PhieuKham" ToRole="ChiTietBenh" />
           <NavigationProperty Name="DonThuocs" Relationship="Self.FK_DonThuoc_MaPhieuKham" FromRole="PhieuKham" ToRole="DonThuoc" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_PhieuKham_MaNhanVien" FromRole="PhieuKham" ToRole="NhanVien" />
         </EntityType>
@@ -313,6 +354,18 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <Property Name="TenVaiTro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanViens" Relationship="Self.FK_NhanVien_MaVaiTro" FromRole="VaiTro" ToRole="NhanVien" />
         </EntityType>
+        <Association Name="FK_ChiTietBenh_MaBenh">
+          <End Role="Benh" Type="Self.Benh" Multiplicity="0..1" />
+          <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Benh">
+              <PropertyRef Name="MaBenh" />
+            </Principal>
+            <Dependent Role="ChiTietBenh">
+              <PropertyRef Name="MaBenh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PhieuKham_MaBenhNhan">
           <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="0..1" />
           <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
@@ -322,6 +375,18 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
             </Principal>
             <Dependent Role="PhieuKham">
               <PropertyRef Name="MaBenhNhan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietBenh_MaPhieuKham">
+          <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+          <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuKham">
+              <PropertyRef Name="MaPhieuKham" />
+            </Principal>
+            <Dependent Role="ChiTietBenh">
+              <PropertyRef Name="MaPhieuKham" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -388,6 +453,7 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
         <EntityContainer Name="QuanLyPhongMachEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Benhs" EntityType="Self.Benh" />
           <EntitySet Name="BenhNhans" EntityType="Self.BenhNhan" />
+          <EntitySet Name="ChiTietBenhs" EntityType="Self.ChiTietBenh" />
           <EntitySet Name="ChiTietDonThuocs" EntityType="Self.ChiTietDonThuoc" />
           <EntitySet Name="DonThuocs" EntityType="Self.DonThuoc" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
@@ -395,9 +461,17 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Thuocs" EntityType="Self.Thuoc" />
           <EntitySet Name="VaiTroes" EntityType="Self.VaiTro" />
+          <AssociationSet Name="FK_ChiTietBenh_MaBenh" Association="Self.FK_ChiTietBenh_MaBenh">
+            <End Role="Benh" EntitySet="Benhs" />
+            <End Role="ChiTietBenh" EntitySet="ChiTietBenhs" />
+          </AssociationSet>
           <AssociationSet Name="FK_PhieuKham_MaBenhNhan" Association="Self.FK_PhieuKham_MaBenhNhan">
             <End Role="BenhNhan" EntitySet="BenhNhans" />
             <End Role="PhieuKham" EntitySet="PhieuKhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietBenh_MaPhieuKham" Association="Self.FK_ChiTietBenh_MaPhieuKham">
+            <End Role="PhieuKham" EntitySet="PhieuKhams" />
+            <End Role="ChiTietBenh" EntitySet="ChiTietBenhs" />
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietDonThuoc_MaDonThuoc" Association="Self.FK_ChiTietDonThuoc_MaDonThuoc">
             <End Role="DonThuoc" EntitySet="DonThuocs" />
@@ -442,6 +516,15 @@ error 6004: The table 'QuanLyPhongMach.dbo.ChiTietBenh' is referenced by a relat
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietBenhs">
+            <EntityTypeMapping TypeName="QuanLyPhongMachModel.ChiTietBenh">
+              <MappingFragment StoreEntitySet="ChiTietBenh">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaPhieuKham" ColumnName="MaPhieuKham" />
+                <ScalarProperty Name="MaBenh" ColumnName="MaBenh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

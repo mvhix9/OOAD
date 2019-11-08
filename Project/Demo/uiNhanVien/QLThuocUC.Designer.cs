@@ -46,6 +46,8 @@
             this.maThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thuocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thuocBindingSource1)).BeginInit();
@@ -59,7 +61,9 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maThuocDataGridViewTextBoxColumn,
             this.tenThuocDataGridViewTextBoxColumn,
-            this.donGiaDataGridViewTextBoxColumn});
+            this.donGiaDataGridViewTextBoxColumn,
+            this.SoLuongTon,
+            this.DonVi});
             this.dataGridView1.DataSource = this.thuocBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(17, 65);
             this.dataGridView1.Name = "dataGridView1";
@@ -191,6 +195,19 @@
             this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
             this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
             // 
+            // SoLuongTon
+            // 
+            this.SoLuongTon.DataPropertyName = "SoLuongTon";
+            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
+            this.SoLuongTon.Name = "SoLuongTon";
+            this.SoLuongTon.ReadOnly = true;
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn Vị";
+            this.DonVi.Name = "DonVi";
+            // 
             // QLThuocUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,5 +255,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maThuocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
     }
 }

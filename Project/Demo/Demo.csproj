@@ -211,7 +211,7 @@
       <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
-      <Project>{2d7a40ce-5a96-40b8-9218-1e192e4e3a06}</Project>
+      <Project>{2D7A40CE-5A96-40B8-9218-1E192E4E3A06}</Project>
       <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">

@@ -20,6 +20,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietBenhs">
+      <EntityTypeMapping TypeName="QuanLyPhongMachModel.ChiTietBenh">
+        <MappingFragment StoreEntitySet="ChiTietBenh">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaPhieuKham" ColumnName="MaPhieuKham" />
+          <ScalarProperty Name="MaBenh" ColumnName="MaBenh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ChiTietDonThuocs">
       <EntityTypeMapping TypeName="QuanLyPhongMachModel.ChiTietDonThuoc">
         <MappingFragment StoreEntitySet="ChiTietDonThuoc">

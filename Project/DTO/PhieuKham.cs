@@ -17,6 +17,7 @@ namespace DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuKham()
         {
+            this.ChiTietBenhs = new HashSet<ChiTietBenh>();
             this.DonThuocs = new HashSet<DonThuoc>();
         }
     
@@ -27,6 +28,8 @@ namespace DTO
         public Nullable<System.DateTime> NgayKham { get; set; }
     
         public virtual BenhNhan BenhNhan { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietBenh> ChiTietBenhs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonThuoc> DonThuocs { get; set; }
         public virtual NhanVien NhanVien { get; set; }

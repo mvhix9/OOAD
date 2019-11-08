@@ -27,6 +27,7 @@ namespace DTO
     
         public virtual DbSet<Benh> Benhs { get; set; }
         public virtual DbSet<BenhNhan> BenhNhans { get; set; }
+        public virtual DbSet<ChiTietBenh> ChiTietBenhs { get; set; }
         public virtual DbSet<ChiTietDonThuoc> ChiTietDonThuocs { get; set; }
         public virtual DbSet<DonThuoc> DonThuocs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
