@@ -1,0 +1,10 @@
+E:\IT\C#\Windows Forms\Project\Common\bin\Debug\Common.dll
+E:\IT\C#\Windows Forms\Project\Common\bin\Debug\Common.pdb
+E:\IT\C#\Windows Forms\Project\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\IT\C#\Windows Forms\Project\Common\obj\Debug\Common.dll
+E:\IT\C#\Windows Forms\Project\Common\obj\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Common\bin\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Common\bin\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Common\obj\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Common\obj\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
