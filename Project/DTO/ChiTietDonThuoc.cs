@@ -15,8 +15,8 @@ namespace DTO
     public partial class ChiTietDonThuoc
     {
         public int SoThuTu { get; set; }
-        public Nullable<int> MaThuoc { get; set; }
-        public Nullable<int> SoLuong { get; set; }
+        public int MaThuoc { get; set; }
+        public int SoLuong { get; set; }
         public Nullable<double> ThanhTien { get; set; }
         public Nullable<int> MaDonThuoc { get; set; }
         public string CachDung { get; set; }

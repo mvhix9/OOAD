@@ -51,6 +51,11 @@ namespace BUS.Services
             return unitOfWork.Thuocs.GetByName(name);
         }
 
+        public double GetPriceById(int id)
+        {
+            return unitOfWork.Thuocs.GetPriceById(id);
+        }
+
         public void Insert(Thuoc entity)
         {
             unitOfWork.Thuocs.Insert(entity);

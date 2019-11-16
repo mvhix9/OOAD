@@ -26,6 +26,7 @@ namespace DTO
         public Nullable<int> MaNhanVien { get; set; }
         public string TrieuChung { get; set; }
         public Nullable<System.DateTime> NgayKham { get; set; }
+        public string TrangThai { get; set; }
     
         public virtual BenhNhan BenhNhan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

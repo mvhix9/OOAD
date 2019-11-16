@@ -15,8 +15,6 @@ namespace DAO.Repository
 
         }
 
-
-
         public QuanLyPhongMachEntities context
         {
             get
@@ -24,7 +22,6 @@ namespace DAO.Repository
                 return Context as QuanLyPhongMachEntities;
             }
         }
-
         public string GetNameById(int id)
         {
             string name = context.VaiTroes.Where(n => n.MaVaiTro == id).Select(n => n.TenVaiTro).FirstOrDefault();

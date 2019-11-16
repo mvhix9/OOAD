@@ -62,8 +62,8 @@
     <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="VaiTro" Relationship="Self.FK_NhanVien_MaVaiTro" FromRole="NhanVien" ToRole="VaiTro" />
     <NavigationProperty Name="PhieuKhams" Relationship="Self.FK_PhieuKham_MaNhanVien" FromRole="NhanVien" ToRole="PhieuKham" />
   </EntityType>
@@ -76,6 +76,7 @@
     <Property Name="MaNhanVien" Type="Int32" />
     <Property Name="TrieuChung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NgayKham" Type="DateTime" Precision="0" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BenhNhan" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="PhieuKham" ToRole="BenhNhan" />
     <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="PhieuKham" ToRole="ChiTietBenh" />
     <NavigationProperty Name="DonThuocs" Relationship="Self.FK_DonThuoc_MaPhieuKham" FromRole="PhieuKham" ToRole="DonThuoc" />

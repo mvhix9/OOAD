@@ -48,6 +48,7 @@ namespace Demo.uiNhanVien
             pk.MaBenhNhan = Int32.Parse(txtMaBN.Text);
             pk.MaNhanVien = Int32.Parse(txtMaBacSi.Text);
             pk.NgayKham = DateTime.Now;
+            pk.TrangThai = "Đã lập";
             phieuKhamServices.Insert(pk);
             MessageBox.Show("Tạo phiếu khám thành công.");
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModel();
@@ -62,6 +63,7 @@ namespace Demo.uiNhanVien
             pk.MaNhanVien = Int32.Parse(txtMaBacSi.Text);
             pk.MaBenhNhan = Int32.Parse(txtMaBN.Text);
             pk.NgayKham = DateTime.Now;
+            pk.TrangThai = "Đã lập";
             phieuKhamServices.Update(pk);
             MessageBox.Show("Sửa phiếu khám thành công.");
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModel();

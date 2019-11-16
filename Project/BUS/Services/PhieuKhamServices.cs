@@ -46,9 +46,35 @@ namespace BUS.Services
             return unitOfWork.PhieuKhams.GetById(id);
         }
 
+        //public List<string> GetChiTietBenhById(int id, DateTime start, DateTime end)
+        //{
+        //    return unitOfWork.PhieuKhams.GetChiTietBenhById(id, start, end);
+        //}
+
         public IEnumerable<ModelPhieuKham> GetModel()
         {
             return unitOfWork.PhieuKhams.GetModel();
+        }
+
+
+        public IEnumerable<ModelPhieuKham> GetModelCompletedByIdDoctor(int id)
+        {
+            return unitOfWork.PhieuKhams.GetModelCompletedByIdDoctor(id);
+        }
+
+        public IEnumerable<ModelPhieuKham> GetModelHasDonThuocByIdDoctor(int id)
+        {
+            return unitOfWork.PhieuKhams.GetModelHasDonThuocByIdDoctor(id);
+        }
+
+        public IEnumerable<ModelTraCuuBenhNhan> GetModelTraCuu(int id, DateTime start, DateTime end)
+        {
+            return unitOfWork.PhieuKhams.GetModelTraCuu(id,start,end);
+        }
+
+        public IEnumerable<ModelPhieuKham> GetModelUncompletedByIdDoctor(int id)
+        {
+            return unitOfWork.PhieuKhams.GetModelUncompletedByIdDoctor(id);
         }
 
         public void Insert(PhieuKham entity)
@@ -68,6 +94,8 @@ namespace BUS.Services
             pk.NgayKham = entity.NgayKham;
             pk.MaBenhNhan = entity.MaBenhNhan;
             pk.MaNhanVien = entity.MaNhanVien;
+            pk.TrieuChung = entity.TrieuChung;
+            pk.TrangThai = entity.TrangThai;
             unitOfWork.Complete();
         }
     }

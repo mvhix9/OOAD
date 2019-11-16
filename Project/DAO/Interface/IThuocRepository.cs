@@ -10,5 +10,6 @@ namespace DAO.Interface
     public interface IThuocRepository : IRepository<Thuoc>
     {
         IEnumerable<Thuoc> GetByName(string name);
+        double GetPriceById(int id);
     }
 }

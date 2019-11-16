@@ -104,15 +104,14 @@ namespace uiBacSi
         private void button1_Click(object sender, EventArgs e)
         {
             moveActivePanel(btnQLBN);
-            loadUserControl(contentPanel, new QLBenhNhanUC());
+            loadUserControl(contentPanel, new BacSiLapPhieuKhamUC());
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            moveActivePanel(button2);
-            loadUserControl(contentPanel, new QLThuocUC());
+            moveActivePanel(btnLapDonThuoc);
+            loadUserControl(contentPanel, new LapDonThuocUC());
         }
 
         private void btnLapPhieuKham_Click(object sender, EventArgs e)

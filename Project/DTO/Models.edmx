@@ -59,8 +59,8 @@
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySinh" Type="date" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
-          <Property Name="TenDangNhap" Type="nchar" MaxLength="50" />
-          <Property Name="MatKhau" Type="nchar" MaxLength="50" />
+          <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuKham">
           <Key>
@@ -71,6 +71,7 @@
           <Property Name="MaNhanVien" Type="int" />
           <Property Name="TrieuChung" Type="nvarchar" MaxLength="255" />
           <Property Name="NgayKham" Type="date" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -306,8 +307,8 @@
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="VaiTro" Relationship="Self.FK_NhanVien_MaVaiTro" FromRole="NhanVien" ToRole="VaiTro" />
           <NavigationProperty Name="PhieuKhams" Relationship="Self.FK_PhieuKham_MaNhanVien" FromRole="NhanVien" ToRole="PhieuKham" />
         </EntityType>
@@ -320,6 +321,7 @@
           <Property Name="MaNhanVien" Type="Int32" />
           <Property Name="TrieuChung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NgayKham" Type="DateTime" Precision="0" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BenhNhan" Relationship="Self.FK_PhieuKham_MaBenhNhan" FromRole="PhieuKham" ToRole="BenhNhan" />
           <NavigationProperty Name="ChiTietBenhs" Relationship="Self.FK_ChiTietBenh_MaPhieuKham" FromRole="PhieuKham" ToRole="ChiTietBenh" />
           <NavigationProperty Name="DonThuocs" Relationship="Self.FK_DonThuoc_MaPhieuKham" FromRole="PhieuKham" ToRole="DonThuoc" />
@@ -571,6 +573,7 @@
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="TrieuChung" ColumnName="TrieuChung" />
                 <ScalarProperty Name="NgayKham" ColumnName="NgayKham" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

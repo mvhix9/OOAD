@@ -52,7 +52,6 @@ namespace uiNhanVien
             this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phieuKhamsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.benhNhanBindingSource)).BeginInit();
@@ -69,8 +68,7 @@ namespace uiNhanVien
             this.hoTenDataGridViewTextBoxColumn,
             this.gioiTinhDataGridViewTextBoxColumn,
             this.ngaySinhDataGridViewTextBoxColumn,
-            this.diaChiDataGridViewTextBoxColumn,
-            this.phieuKhamsDataGridViewTextBoxColumn});
+            this.diaChiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.benhNhanBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(19, 15);
             this.dataGridView1.Name = "dataGridView1";
@@ -261,13 +259,6 @@ namespace uiNhanVien
             this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
             this.diaChiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // phieuKhamsDataGridViewTextBoxColumn
-            // 
-            this.phieuKhamsDataGridViewTextBoxColumn.DataPropertyName = "PhieuKhams";
-            this.phieuKhamsDataGridViewTextBoxColumn.HeaderText = "PhieuKhams";
-            this.phieuKhamsDataGridViewTextBoxColumn.Name = "phieuKhamsDataGridViewTextBoxColumn";
-            this.phieuKhamsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // QLBenhNhanUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,12 +297,11 @@ namespace uiNhanVien
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.BindingSource benhNhanBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn maBenhNhanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phieuKhamsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource benhNhanBindingSource;
     }
 }

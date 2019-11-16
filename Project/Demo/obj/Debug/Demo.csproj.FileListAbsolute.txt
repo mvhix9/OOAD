@@ -57,11 +57,15 @@ E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.Properties.Resou
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\bin\Debug\DAO.dll
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\bin\Debug\DAO.pdb
-E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLNhanVienUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.IndexUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLThuocUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiNhanVien.QLBenhNhanUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiNhanVien.NhanVienFRM.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.NhanVienLapPhieuKhamUC.resources
-E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\Demo.uiBacSi.BacSiLapPhieuKhamUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiBacSi.BACSIFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiBacSi.BacSiLapPhieuKhamUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiBacSi.TraCuuBenhNhan.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiBacSi.LapDonThuocUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QuanTriVienFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QLNhanVienUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.XemBaoCaoUC.resources

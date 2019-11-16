@@ -54,8 +54,8 @@
     <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
     <Property Name="NgaySinh" Type="date" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
-    <Property Name="TenDangNhap" Type="nchar" MaxLength="50" />
-    <Property Name="MatKhau" Type="nchar" MaxLength="50" />
+    <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="PhieuKham">
     <Key>
@@ -66,6 +66,7 @@
     <Property Name="MaNhanVien" Type="int" />
     <Property Name="TrieuChung" Type="nvarchar" MaxLength="255" />
     <Property Name="NgayKham" Type="date" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

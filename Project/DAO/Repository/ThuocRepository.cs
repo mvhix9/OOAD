@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAO.Repository
 {
@@ -25,5 +26,10 @@ namespace DAO.Repository
             return context.Thuocs.Where(t => t.TenThuoc.Contains(name)).ToList();
         }
 
+        public double GetPriceById(int id)
+        {
+            double dongia = context.Thuocs.Where(t => t.MaThuoc == id).FirstOrDefault().DonGia;
+            return dongia;
         }
+    }
 }

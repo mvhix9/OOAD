@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uiBacSi;
 using uiNhanVien;
+using uiQuanTriVien;
 
 namespace Demo
 {
@@ -23,7 +24,9 @@ namespace Demo
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new NhanVienFRM());
             //Application.Run(new MainFRM());
-            Application.Run(new BACSIFRM());
+            //Application.Run(new TraCuuBenhNhan());
+            //Application.Run(new BACSIFRM());
+            Application.Run(new QuanTriVienFRM());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

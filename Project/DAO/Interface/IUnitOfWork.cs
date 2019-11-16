@@ -15,6 +15,11 @@ namespace DAO.UnitOfWork
         IVaiTroRepository VaiTroes { get; }
         IPhieuKhamRepository PhieuKhams { get; }
         IBenhNhanRepository BenhNhans { get; }
+        IChiTietBenhRepository ChiTietBenhs { get; }
+        IBenhRepository Benhs { get; }
+        IChiTietDonThuocRepository ChiTietDonThuocs { get; }
+        IDonThuocRepository DonThuocs { get; }
+        IBaoCaoRepository BaoCaos { get; }
         int Complete();
     }
 }

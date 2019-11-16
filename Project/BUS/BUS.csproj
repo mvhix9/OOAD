@@ -44,13 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IBaoCaoServices.cs" />
     <Compile Include="Interface\IBenhNhanServices.cs" />
+    <Compile Include="Interface\IBenhServices.cs" />
+    <Compile Include="Interface\IChiTietBenhServices.cs" />
+    <Compile Include="Interface\IChiTietDonThuocServices.cs" />
+    <Compile Include="Interface\IDonThuocServices.cs" />
     <Compile Include="Interface\INhanVienServices.cs" />
     <Compile Include="Interface\IPhieuKhamServices.cs" />
     <Compile Include="Interface\IServices.cs" />
     <Compile Include="Interface\IThuocServices.cs" />
     <Compile Include="Interface\IVaiTroServices.cs" />
+    <Compile Include="Services\BaoCaoServices.cs" />
     <Compile Include="Services\BenhNhanServices.cs" />
+    <Compile Include="Services\BenhServices.cs" />
+    <Compile Include="Services\ChiTietBenhServices.cs" />
+    <Compile Include="Services\ChiTietDonThuocServices.cs" />
+    <Compile Include="Services\DonThuocServices.cs" />
     <Compile Include="Services\NhanVienServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PhieuKhamServices.cs" />

@@ -72,6 +72,7 @@
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="TrieuChung" ColumnName="TrieuChung" />
           <ScalarProperty Name="NgayKham" ColumnName="NgayKham" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

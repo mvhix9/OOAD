@@ -21,7 +21,7 @@ namespace DTO
         }
     
         public int MaDonThuoc { get; set; }
-        public Nullable<int> MaPhieuKham { get; set; }
+        public int MaPhieuKham { get; set; }
         public Nullable<double> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -42,7 +42,7 @@
             this.menuPanel = new System.Windows.Forms.Panel();
             this.activePanel = new System.Windows.Forms.Panel();
             this.btnLapPhieuKham = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLapDonThuoc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQLBN = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnIndex = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblRole = new System.Windows.Forms.Label();
@@ -158,9 +158,9 @@
             this.lblFormTitle.ForeColor = System.Drawing.Color.White;
             this.lblFormTitle.Location = new System.Drawing.Point(11, 16);
             this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(111, 25);
+            this.lblFormTitle.Size = new System.Drawing.Size(67, 25);
             this.lblFormTitle.TabIndex = 0;
-            this.lblFormTitle.Text = "NHÂN VIÊN";
+            this.lblFormTitle.Text = "BÁC SĨ";
             // 
             // bunifuDragControl1
             // 
@@ -174,7 +174,7 @@
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.menuPanel.Controls.Add(this.activePanel);
             this.menuPanel.Controls.Add(this.btnLapPhieuKham);
-            this.menuPanel.Controls.Add(this.button2);
+            this.menuPanel.Controls.Add(this.btnLapDonThuoc);
             this.menuPanel.Controls.Add(this.btnQLBN);
             this.menuPanel.Controls.Add(this.btnIndex);
             this.menuPanel.Controls.Add(this.lblRole);
@@ -239,44 +239,44 @@
             this.btnLapPhieuKham.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLapPhieuKham.Click += new System.EventHandler(this.btnLapPhieuKham_Click);
             // 
-            // button2
+            // btnLapDonThuoc
             // 
-            this.button2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.BorderRadius = 0;
-            this.button2.ButtonText = "QLTHUOC";
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.button2.DisabledColor = System.Drawing.Color.Gray;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Iconcolor = System.Drawing.Color.Transparent;
-            this.button2.Iconimage = null;
-            this.button2.Iconimage_right = null;
-            this.button2.Iconimage_right_Selected = null;
-            this.button2.Iconimage_Selected = null;
-            this.button2.IconMarginLeft = 0;
-            this.button2.IconMarginRight = 0;
-            this.button2.IconRightVisible = true;
-            this.button2.IconRightZoom = 0D;
-            this.button2.IconVisible = true;
-            this.button2.IconZoom = 90D;
-            this.button2.IsTab = true;
-            this.button2.Location = new System.Drawing.Point(0, 347);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.button2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
-            this.button2.OnHoverTextColor = System.Drawing.Color.White;
-            this.button2.selected = false;
-            this.button2.Size = new System.Drawing.Size(240, 81);
-            this.button2.TabIndex = 1;
-            this.button2.TabStop = false;
-            this.button2.Text = "QLTHUOC";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button2.Textcolor = System.Drawing.Color.White;
-            this.button2.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLapDonThuoc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnLapDonThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.btnLapDonThuoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLapDonThuoc.BorderRadius = 0;
+            this.btnLapDonThuoc.ButtonText = "LẬP ĐƠN THUỐC";
+            this.btnLapDonThuoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnLapDonThuoc, BunifuAnimatorNS.DecorationType.None);
+            this.btnLapDonThuoc.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLapDonThuoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLapDonThuoc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLapDonThuoc.Iconimage = null;
+            this.btnLapDonThuoc.Iconimage_right = null;
+            this.btnLapDonThuoc.Iconimage_right_Selected = null;
+            this.btnLapDonThuoc.Iconimage_Selected = null;
+            this.btnLapDonThuoc.IconMarginLeft = 0;
+            this.btnLapDonThuoc.IconMarginRight = 0;
+            this.btnLapDonThuoc.IconRightVisible = true;
+            this.btnLapDonThuoc.IconRightZoom = 0D;
+            this.btnLapDonThuoc.IconVisible = true;
+            this.btnLapDonThuoc.IconZoom = 90D;
+            this.btnLapDonThuoc.IsTab = true;
+            this.btnLapDonThuoc.Location = new System.Drawing.Point(0, 347);
+            this.btnLapDonThuoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLapDonThuoc.Name = "btnLapDonThuoc";
+            this.btnLapDonThuoc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.btnLapDonThuoc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnLapDonThuoc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLapDonThuoc.selected = false;
+            this.btnLapDonThuoc.Size = new System.Drawing.Size(240, 81);
+            this.btnLapDonThuoc.TabIndex = 1;
+            this.btnLapDonThuoc.TabStop = false;
+            this.btnLapDonThuoc.Text = "LẬP ĐƠN THUỐC";
+            this.btnLapDonThuoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLapDonThuoc.Textcolor = System.Drawing.Color.White;
+            this.btnLapDonThuoc.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLapDonThuoc.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnQLBN
             // 
@@ -481,7 +481,7 @@
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation1;
             // 
-            // NhanVienFRM
+            // BACSIFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -493,7 +493,7 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NhanVienFRM";
+            this.Name = "BACSIFRM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.NhanVienFRM_Load);
@@ -531,7 +531,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblRole;
         private Bunifu.Framework.UI.BunifuFlatButton btnIndex;
-        private Bunifu.Framework.UI.BunifuFlatButton button2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLapDonThuoc;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLBN;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapPhieuKham;
         private System.Windows.Forms.Panel activePanel;

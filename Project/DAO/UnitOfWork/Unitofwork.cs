@@ -18,9 +18,14 @@ namespace DAO.UnitOfWork
             this.context = context;
             Nhanviens = new NhanVienRepository(context);
             Thuocs = new ThuocRepository(context);
-            Vaitroes = new VaiTroRepository(context);
+            VaiTroes = new VaiTroRepository(context);
             PhieuKhams = new PhieuKhamRepository(context);
             BenhNhans = new BenhNhanRepository(context);
+            Benhs = new BenhRepository(context);
+            ChiTietBenhs = new ChiTietBenhRepository(context);
+            ChiTietDonThuocs = new ChiTietDonThuocRepository(context);
+            DonThuocs = new DonThuocRepository(context);
+            BaoCaos = new BaoCaoRepository(context);
         }
         public INhanVienRepository Nhanviens  {get; private set;}
 
@@ -31,13 +36,29 @@ namespace DAO.UnitOfWork
         public IThuocRepository Thuocs { get; private set; }
 
 
-
         public IVaiTroRepository VaiTroes
         {
             get; private set;
         }
 
         public IVaiTroRepository Vaitroes { get; private set; }
+
+        public IChiTietBenhRepository ChiTietBenhs { get; private set; }
+        
+        public IBenhRepository Benhs { get; private set; }
+
+        public IChiTietDonThuocRepository ChiTietDonThuocs
+        {
+            get; private set; 
+        }
+
+        public IDonThuocRepository DonThuocs
+        {
+            get; private set;
+        }
+
+        public IBaoCaoRepository BaoCaos {get; private set;}
+
         public int Complete()
         {
             return context.SaveChanges();

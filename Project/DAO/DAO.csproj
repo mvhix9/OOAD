@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IBaoCaoRepository.cs" />
     <Compile Include="Interface\IBenhNhanRepository.cs" />
+    <Compile Include="Interface\IBenhRepository.cs" />
+    <Compile Include="Interface\IChiTietBenhRepository.cs" />
+    <Compile Include="Interface\IChiTietDonThuocRepository.cs" />
+    <Compile Include="Interface\IDonThuocRepository.cs" />
     <Compile Include="Interface\INhanVienRepository.cs" />
     <Compile Include="Interface\IPhieuKhamRepository.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Interface\IThuocRepository.cs" />
     <Compile Include="Interface\IUnitOfWork.cs" />
     <Compile Include="Interface\IVaiTroRepository.cs" />
+    <Compile Include="Repository\BaoCaoRepository.cs" />
     <Compile Include="Repository\BenhNhanRepository.cs" />
+    <Compile Include="Repository\BenhRepository.cs" />
+    <Compile Include="Repository\ChiTietBenhRepository.cs" />
+    <Compile Include="Repository\ChiTietDonThuocRepository.cs" />
+    <Compile Include="Repository\DonThuocRepository.cs" />
     <Compile Include="Repository\NhanVienRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PhieuKhamRepository.cs" />

@@ -11,5 +11,10 @@ namespace DAO.Interface
     public interface IPhieuKhamRepository : IRepository<PhieuKham>
     {
         IEnumerable<ModelPhieuKham> GetModel();
+        IEnumerable<ModelPhieuKham> GetModelByIdDoctor(int id);
+        IEnumerable<ModelPhieuKham> GetModelUncompletedByIdDoctor(int id);
+        IEnumerable<ModelPhieuKham> GetModelCompletedByIdDoctor(int id);
+        IEnumerable<ModelPhieuKham> GetModelHasDonThuocByIdDoctor(int id);
+        List<ModelTraCuuBenhNhan> GetModelTraCuu(int id,DateTime from,DateTime to);
     }
 }

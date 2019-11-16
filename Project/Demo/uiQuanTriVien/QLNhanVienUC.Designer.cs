@@ -1,4 +1,5 @@
-﻿namespace Demo.uiNhanVien
+﻿namespace uiQuanTriVien
+
 {
     partial class QLNhanVienUC
     {
@@ -33,6 +34,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -51,16 +53,15 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoTenDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vaiTroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaiTroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +102,10 @@
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(42, 22);
             this.txtMaNV.TabIndex = 4;
+            // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataSource = typeof(DTO.NhanVien);
             // 
             // txtHoTen
             // 
@@ -144,8 +149,8 @@
             // 
             this.cbVaiTro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbVaiTro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbVaiTro.DataSource = this.nhanVienBindingSource;
-            this.cbVaiTro.DisplayMember = "VaiTro";
+            this.cbVaiTro.DataSource = this.vaiTroBindingSource;
+            this.cbVaiTro.DisplayMember = "TenVaiTro";
             this.cbVaiTro.FormattingEnabled = true;
             this.cbVaiTro.Location = new System.Drawing.Point(394, 77);
             this.cbVaiTro.Name = "cbVaiTro";
@@ -303,10 +308,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(973, 409);
             this.dataGridView1.TabIndex = 14;
             // 
-            // nhanVienBindingSource
-            // 
-            this.nhanVienBindingSource.DataSource = typeof(DTO.NhanVien);
-            // 
             // hoTenDataGridViewTextBoxColumn2
             // 
             this.hoTenDataGridViewTextBoxColumn2.DataPropertyName = "HoTen";
@@ -354,10 +355,10 @@
             this.Name = "QLNhanVienUC";
             this.Size = new System.Drawing.Size(1007, 733);
             this.Load += new System.EventHandler(this.QLNhanVienUC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaiTroBindingSource)).EndInit();
             this.ResumeLayout(false);
 

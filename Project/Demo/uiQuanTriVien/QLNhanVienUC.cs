@@ -13,7 +13,7 @@ using BUS.Interface;
 using BUS.Services;
 using DAO.UnitOfWork;
 
-namespace Demo.uiNhanVien
+namespace uiQuanTriVien
 {
     public partial class QLNhanVienUC : UserControl
     {
@@ -27,8 +27,7 @@ namespace Demo.uiNhanVien
         private void QLNhanVienUC_Load(object sender, EventArgs e)
         {
             nhanVienBindingSource.DataSource = nhanVienServices.GetAll();
-            cbVaiTro.DataSource = nhanVienServices.GetRoles;
-
+            vaiTroBindingSource.DataSource = vaiTroServices.GetAll();
         }
 
         private void getCbVaiTroData(AutoCompleteStringCollection data)

@@ -10,5 +10,6 @@ namespace BUS.Interface
     public interface IThuocServices : IServices<Thuoc>
     {
         IEnumerable<Thuoc> GetByName(string name);
+        Double GetPriceById(int id);
     }
 }

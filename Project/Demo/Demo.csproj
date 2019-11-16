@@ -59,11 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QuanLyPhongMachDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyPhongMachDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="uiBacSi\BACSIFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,16 +71,28 @@
     <Compile Include="uiBacSi\BacSiLapPhieuKhamUC.Designer.cs">
       <DependentUpon>BacSiLapPhieuKhamUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="uiBacSi\LapDonThuocUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiBacSi\LapDonThuocUC.Designer.cs">
+      <DependentUpon>LapDonThuocUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiBacSi\TraCuuBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiBacSi\TraCuuBenhNhan.Designer.cs">
+      <DependentUpon>TraCuuBenhNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="uiNhanVien\NhanVienLapPhieuKhamUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uiNhanVien\NhanVienLapPhieuKhamUC.Designer.cs">
       <DependentUpon>NhanVienLapPhieuKhamUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="uiNhanVien\QLNhanVienUC.cs">
+    <Compile Include="uiQuanTriVien\QLNhanVienUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uiNhanVien\QLNhanVienUC.Designer.cs">
+    <Compile Include="uiQuanTriVien\QLNhanVienUC.Designer.cs">
       <DependentUpon>QLNhanVienUC.cs</DependentUpon>
     </Compile>
     <Compile Include="uiNhanVien\NhanVienFRM.cs">
@@ -120,16 +127,34 @@
     <Compile Include="uiNhanVien\QLBenhNhanUC.Designer.cs">
       <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="uiQuanTriVien\QuanTriVienFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiQuanTriVien\QuanTriVienFRM.Designer.cs">
+      <DependentUpon>QuanTriVienFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiQuanTriVien\XemBaoCaoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiQuanTriVien\XemBaoCaoUC.Designer.cs">
+      <DependentUpon>XemBaoCaoUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="uiBacSi\BACSIFRM.resx">
       <DependentUpon>BACSIFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uiBacSi\BacSiLapPhieuKhamUC.resx">
       <DependentUpon>BacSiLapPhieuKhamUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uiBacSi\LapDonThuocUC.resx">
+      <DependentUpon>LapDonThuocUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiBacSi\TraCuuBenhNhan.resx">
+      <DependentUpon>TraCuuBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uiNhanVien\NhanVienLapPhieuKhamUC.resx">
       <DependentUpon>NhanVienLapPhieuKhamUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uiNhanVien\QLNhanVienUC.resx">
+    <EmbeddedResource Include="uiQuanTriVien\QLNhanVienUC.resx">
       <DependentUpon>QLNhanVienUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IndexUC.resx">
@@ -156,8 +181,20 @@
     <EmbeddedResource Include="uiNhanVien\QLBenhNhanUC.resx">
       <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uiQuanTriVien\QuanTriVienFRM.resx">
+      <DependentUpon>QuanTriVienFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiQuanTriVien\XemBaoCaoUC.resx">
+      <DependentUpon>XemBaoCaoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\DTO.Benh.datasource" />
     <None Include="Properties\DataSources\DTO.BenhNhan.datasource" />
+    <None Include="Properties\DataSources\DTO.ChiTietDonThuoc.datasource" />
+    <None Include="Properties\DataSources\DTO.Models.ModelBaoCaoDoanhThu.datasource" />
+    <None Include="Properties\DataSources\DTO.Models.ModelBaoCaoThuoc.datasource" />
+    <None Include="Properties\DataSources\DTO.Models.ModelChiTietDonThuoc.datasource" />
     <None Include="Properties\DataSources\DTO.Models.ModelPhieuKham.datasource" />
+    <None Include="Properties\DataSources\DTO.Models.ModelTraCuuBenhNhan.datasource" />
     <None Include="Properties\DataSources\DTO.NhanVien.datasource" />
     <None Include="Properties\DataSources\DTO.Thuoc.datasource" />
     <None Include="Properties\DataSources\DTO.VaiTro.datasource" />
@@ -170,17 +207,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyPhongMachDataSet.xsc">
-      <DependentUpon>QuanLyPhongMachDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyPhongMachDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyPhongMachDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyPhongMachDataSet.xss">
-      <DependentUpon>QuanLyPhongMachDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -219,9 +245,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="uiQuanTriVien\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
