@@ -9,7 +9,6 @@ namespace DAO.Interface
 {
     public interface IBenhNhanRepository : IRepository<BenhNhan>
     {
-        IEnumerable<string> GetName { get; }
-        List<int> GetId { get; }
+       
     }
 }

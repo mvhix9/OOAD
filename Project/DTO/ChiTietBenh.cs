@@ -15,8 +15,8 @@ namespace DTO
     public partial class ChiTietBenh
     {
         public int STT { get; set; }
-        public Nullable<int> MaPhieuKham { get; set; }
-        public Nullable<int> MaBenh { get; set; }
+        public int MaPhieuKham { get; set; }
+        public int MaBenh { get; set; }
     
         public virtual Benh Benh { get; set; }
         public virtual PhieuKham PhieuKham { get; set; }

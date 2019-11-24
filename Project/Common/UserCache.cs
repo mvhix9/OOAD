@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,20 @@ namespace Common
         {
             get; set;
         }
+
         public static string Role
         {
             get; set;
         }
-        
+
+        public static int RoleId
+        {
+            get; set;
+        }
+
+        public static int Id
+        {
+            get; set;
+        }
     }
 }

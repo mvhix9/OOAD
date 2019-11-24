@@ -34,9 +34,9 @@ namespace DAO.Repository
                         select new ModelChiTietDonThuoc
                         {
                             TenThuoc = t.TenThuoc,
-                            SoLuong = ctdt.SoLuong,
+                            SoLuong = ctdt.SoLuong.Value,
                             CachDung = ctdt.CachDung,
-                            DonGia = t.DonGia,
+                            DonGia = t.DonGia.Value,
                             ThanhTien = ctdt.ThanhTien,
                             MaThuoc = t.MaThuoc,
                         };

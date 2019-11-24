@@ -22,7 +22,7 @@ namespace DTO
     
         public int MaThuoc { get; set; }
         public string TenThuoc { get; set; }
-        public double DonGia { get; set; }
+        public Nullable<double> DonGia { get; set; }
         public Nullable<int> SoLuongTon { get; set; }
         public string DonVi { get; set; }
     

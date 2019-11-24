@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demo.uiNhanVien
+namespace Demo
 {
     public partial class IndexUC : UserControl
     {

@@ -12,6 +12,7 @@ using DAO.UnitOfWork;
 using DTO;
 using System.Text.RegularExpressions;
 using DTO.Models;
+using Common;
 
 namespace uiBacSi
 {
@@ -27,13 +28,13 @@ namespace uiBacSi
         DonThuocServices donThuocServices = new DonThuocServices(new UnitOfWork(new QuanLyPhongMachEntities()));
         private void LapDonThuocUC_Load(object sender, EventArgs e)
         {
-            modelPhieuKhamBindingSource1.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(2);
+            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
             thuocBindingSource.DataSource = thuocServices.GetAll();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(dataGridViewPhieuKham.CurrentRow == null)
+            if(dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn phiếu khám.");
                 return;
@@ -46,7 +47,7 @@ namespace uiBacSi
                 double dongia = thuocServices.GetPriceById(mathuoc);
                 int soluong = Int32.Parse(txtSoLuong.Text.ToString());
                 double thanhtien = dongia * soluong;
-                dataGridViewChiTietDonThuoc.Rows.Add(mathuoc, tenthuoc, soluong, cachdung, dongia, thanhtien);
+                dtgvChiTietDT.Rows.Add(mathuoc, tenthuoc, soluong, cachdung, dongia, thanhtien);
             }
         }
         bool CheckTextBox()
@@ -90,37 +91,37 @@ namespace uiBacSi
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(dataGridViewChiTietDonThuoc.CurrentRow == null)
+            if(dtgvChiTietDT.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn chi tiết đơn thuốc");
                 return;
             }
-            dataGridViewChiTietDonThuoc.Rows.RemoveAt(dataGridViewChiTietDonThuoc.CurrentRow.Index);
+            dtgvChiTietDT.Rows.RemoveAt(dtgvChiTietDT.CurrentRow.Index);
             MessageBox.Show("Xóa thành công.");
         }
 
         private void btnLuuDonThuoc_Click(object sender, EventArgs e)
         {
-            if(dataGridViewPhieuKham.CurrentRow == null)
+            if(dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn phiếu khám.");
                 return;
             }
 
             //Cập nhật trạng thái phiếu khám
-            int id = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
+            int id = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
             PhieuKham pk = phieuKhamServices.GetById(id);
             pk.TrangThai = "Đã lập đơn thuốc";
             phieuKhamServices.Update(pk);
 
             //Tạo đơn thuốc mới
             DonThuoc donthuoc = new DonThuoc();
-            donthuoc.MaPhieuKham = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
+            donthuoc.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
             donThuocServices.Insert(donthuoc);
 
             //Tạo chi tiết đơn thuốc
             double tongTien = 0;
-            foreach (DataGridViewRow row in dataGridViewChiTietDonThuoc.Rows)
+            foreach (DataGridViewRow row in dtgvChiTietDT.Rows)
             {
                 ChiTietDonThuoc ctdt = new ChiTietDonThuoc();
                 ctdt.MaDonThuoc = donthuoc.MaDonThuoc;
@@ -142,27 +143,32 @@ namespace uiBacSi
             donThuocServices.Update(donthuoc);
 
             thuocBindingSource.DataSource = thuocServices.GetAll();
-            modelPhieuKhamBindingSource1.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(2);
-            dataGridViewChiTietDonThuoc.Rows.Clear();
-            dataGridViewChiTietDonThuoc.Refresh();
+            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
+            dtgvChiTietDT.Rows.Clear();
+            dtgvChiTietDT.Refresh();
             MessageBox.Show("Lập đơn thuốc thành công.");
         }
 
-        private void dataGridViewPhieuKham_CurrentCellChanged(object sender, EventArgs e)
+        private void dtgvPhieuKham_CurrentCellChanged(object sender, EventArgs e)
         {
-            dataGridViewChiTietDonThuoc.Rows.Clear();
+            dtgvChiTietDT.Rows.Clear();
             if (radDaLapDonThuoc.Checked == false)
             {
                 return;
             }
-            if (dataGridViewPhieuKham.CurrentRow != null)
+            if (dtgvPhieuKham.CurrentRow != null)
             {
-                int maPK = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
+                int maPK = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
                 IEnumerable<ModelChiTietDonThuoc> models = chiTietDonThuocServices.GetModelByIdPhieuKham(maPK);
+                double? total = 0;
                 foreach (ModelChiTietDonThuoc model in models)
                 {
-                    dataGridViewChiTietDonThuoc.Rows.Add(model.MaThuoc.ToString() , model.TenThuoc.ToString() , model.SoLuong.ToString(), model.CachDung.ToString() , model.DonGia.ToString(), model.ThanhTien.ToString());
+                    total += model.ThanhTien;
+                    dtgvChiTietDT.Rows.Add(model.MaThuoc.ToString(), model.TenThuoc.ToString(), 
+                        model.SoLuong.ToString(), model.CachDung.ToString(), model.DonGia.ToString(), model.ThanhTien.ToString());
                 }
+                txtTongTien.Text = total.ToString();
+                txtTongTien.TextAlign = HorizontalAlignment.Right;
             }
         }
 
@@ -173,7 +179,7 @@ namespace uiBacSi
             {
                 if (rb.Checked)
                 {
-                    modelPhieuKhamBindingSource1.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(2);
+                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
                 }
             }
         }
@@ -185,7 +191,7 @@ namespace uiBacSi
             {
                 if (rb.Checked)
                 {
-                    modelPhieuKhamBindingSource1.DataSource = phieuKhamServices.GetModelHasDonThuocByIdDoctor(2);
+                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelHasDonThuocByIdDoctor(UserCache.Id);
                 }
             }
         }

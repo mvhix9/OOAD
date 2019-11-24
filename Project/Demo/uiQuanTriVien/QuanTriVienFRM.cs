@@ -11,6 +11,7 @@ using Common;
 using Demo.uiNhanVien;
 using uiNhanVien;
 using uiBacSi;
+using Demo;
 
 namespace uiQuanTriVien
 {
@@ -20,34 +21,15 @@ namespace uiQuanTriVien
         {
             InitializeComponent();
         }
-        #region Demochangepanel
-        //static nhanvienfrm obj;
-        //public static nhanvienfrm instance
-        //{
-        //    get
-        //    {
-        //        if (obj == null)
-        //        {
-        //            obj = new nhanvienfrm();
-        //        }
-        //        return obj;
-        //    }
-        //}
 
-        //public panel contentpanel
-        //{
-        //    get { return contentpanel; }
-        //    set { contentpanel = value; }
-        //}
-        #endregion
-        private void NhanVienFRM_Load(object sender, EventArgs e)
+        private void QuanTriVienFRM_Load(object sender, EventArgs e)
         {
-            this.Select();
             lblName.Text = UserCache.Name;
+            int left = (lblName.Parent.Width - lblName.Width) / 2;
+            centerLocation(lblName, left, 146);
             lblRole.Text = UserCache.Role;
             btnIndex.selected = true;
             btnIndex_Click(sender, e);
-            //obj = this;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -89,6 +71,11 @@ namespace uiQuanTriVien
                 bunifuTransition1.ShowSync(activePanel);
         }
 
+        public static void centerLocation(Control control, int x, int y)
+        {
+            control.Location = new Point(x, y);
+        }
+
         // load user control into panel
         private void loadUserControl(Panel panel, Control control)
         {
@@ -102,22 +89,22 @@ namespace uiQuanTriVien
             loadUserControl(contentPanel, new IndexUC());
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            moveActivePanel(btnQLNV);
-            loadUserControl(contentPanel, new QLNhanVienUC());
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
             moveActivePanel(btnXemBaoCao);
             loadUserControl(contentPanel, new XemBaoCaoUC());
         }
 
-        private void btnLapPhieuKham_Click(object sender, EventArgs e)
+        private void btnQLNV_Click(object sender, EventArgs e)
         {
-            
+            moveActivePanel(btnQLNV);
+            loadUserControl(contentPanel, new QLNhanVienUC());
+        }
+
+        private void btnTuyChon_Click(object sender, EventArgs e)
+        {
+            moveActivePanel(btnTuyChon);
+            loadUserControl(contentPanel, new TuyChonUC());
         }
     }
 }

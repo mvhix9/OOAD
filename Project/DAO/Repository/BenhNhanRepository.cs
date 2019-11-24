@@ -16,30 +16,5 @@ namespace DAO.Repository
         {
             get { return Context as QuanLyPhongMachEntities; }
         }
-
-        public List<int> GetId
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        IEnumerable<string> IBenhNhanRepository.GetName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        IEnumerable<string> GetName
-        {
-            get
-            {
-                var name = context.BenhNhans.Select(b => b.HoTen);
-                return name.ToList();
-            }
-        }
     }
 }

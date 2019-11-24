@@ -1,4 +1,4 @@
-﻿namespace Demo.uiNhanVien
+﻿namespace Demo
 {
     partial class IndexUC
     {

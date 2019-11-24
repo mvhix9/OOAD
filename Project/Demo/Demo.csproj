@@ -59,11 +59,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="uiBacSi\BACSIFRM.cs">
+    <Compile Include="TuyChonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TuyChonUC.Designer.cs">
+      <DependentUpon>TuyChonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiBacSi\BacSiFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="uiBacSi\BACSIFRM.Designer.cs">
-      <DependentUpon>BACSIFRM.cs</DependentUpon>
+    <Compile Include="uiBacSi\BacSiFRM.Designer.cs">
+      <DependentUpon>BacSiFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="uiBacSi\BacSiLapPhieuKhamUC.cs">
       <SubType>UserControl</SubType>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="uiNhanVien\NhanVienLapPhieuKhamUC.Designer.cs">
       <DependentUpon>NhanVienLapPhieuKhamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiNhanVien\QLBenhNhanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiNhanVien\QLBenhNhanUC.Designer.cs">
+      <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiNhanVien\QLBenhUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiNhanVien\QLBenhUC.Designer.cs">
+      <DependentUpon>QLBenhUC.cs</DependentUpon>
     </Compile>
     <Compile Include="uiQuanTriVien\QLNhanVienUC.cs">
       <SubType>UserControl</SubType>
@@ -121,12 +139,6 @@
     <Compile Include="uiNhanVien\QLThuocUC.Designer.cs">
       <DependentUpon>QLThuocUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="uiNhanVien\QLBenhNhanUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uiNhanVien\QLBenhNhanUC.Designer.cs">
-      <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="uiQuanTriVien\QuanTriVienFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,8 +151,11 @@
     <Compile Include="uiQuanTriVien\XemBaoCaoUC.Designer.cs">
       <DependentUpon>XemBaoCaoUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="uiBacSi\BACSIFRM.resx">
-      <DependentUpon>BACSIFRM.cs</DependentUpon>
+    <EmbeddedResource Include="TuyChonUC.resx">
+      <DependentUpon>TuyChonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiBacSi\BacSiFRM.resx">
+      <DependentUpon>BacSiFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uiBacSi\BacSiLapPhieuKhamUC.resx">
       <DependentUpon>BacSiLapPhieuKhamUC.cs</DependentUpon>
@@ -153,6 +168,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uiNhanVien\NhanVienLapPhieuKhamUC.resx">
       <DependentUpon>NhanVienLapPhieuKhamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiNhanVien\QLBenhNhanUC.resx">
+      <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiNhanVien\QLBenhUC.resx">
+      <DependentUpon>QLBenhUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uiQuanTriVien\QLNhanVienUC.resx">
       <DependentUpon>QLNhanVienUC.cs</DependentUpon>
@@ -177,9 +198,6 @@
     </Compile>
     <EmbeddedResource Include="uiNhanVien\QLThuocUC.resx">
       <DependentUpon>QLThuocUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uiNhanVien\QLBenhNhanUC.resx">
-      <DependentUpon>QLBenhNhanUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uiQuanTriVien\QuanTriVienFRM.resx">
       <DependentUpon>QuanTriVienFRM.cs</DependentUpon>

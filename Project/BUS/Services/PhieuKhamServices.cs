@@ -31,6 +31,11 @@ namespace BUS.Services
             unitOfWork.Complete();
         }
 
+        public IEnumerable<ModelPhieuKham> Find(Expression<Func<ModelPhieuKham, bool>> predicate)
+        {
+            return unitOfWork.PhieuKhams.Find(predicate);
+        }
+
         public IEnumerable<PhieuKham> Find(Expression<Func<PhieuKham, bool>> predicate)
         {
             return unitOfWork.PhieuKhams.Find(predicate);
@@ -55,7 +60,6 @@ namespace BUS.Services
         {
             return unitOfWork.PhieuKhams.GetModel();
         }
-
 
         public IEnumerable<ModelPhieuKham> GetModelCompletedByIdDoctor(int id)
         {

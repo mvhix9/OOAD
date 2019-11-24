@@ -9,6 +9,6 @@ namespace BUS.Interface
 {
     public interface IBenhNhanServices : IServices<BenhNhan>
     {
-        IEnumerable<string> GetName { get; }
+       
     }
 }

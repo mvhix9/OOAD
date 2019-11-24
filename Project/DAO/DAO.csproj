@@ -70,9 +70,8 @@
     <Compile Include="Repository\PhieuKhamRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\ThuocRepository.cs" />
-    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Repository\VaiTroRepository.cs" />
-    <Compile Include="UnitOfWork\Unitofwork.cs" />
+    <Compile Include="UnitOfWork\UnitOfwork.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

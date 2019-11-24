@@ -16,9 +16,9 @@ namespace DTO
     {
         public int SoThuTu { get; set; }
         public int MaThuoc { get; set; }
-        public int SoLuong { get; set; }
+        public Nullable<int> SoLuong { get; set; }
         public Nullable<double> ThanhTien { get; set; }
-        public Nullable<int> MaDonThuoc { get; set; }
+        public int MaDonThuoc { get; set; }
         public string CachDung { get; set; }
     
         public virtual DonThuoc DonThuoc { get; set; }

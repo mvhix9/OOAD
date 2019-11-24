@@ -35,7 +35,6 @@ namespace DAO.UnitOfWork
 
         public IThuocRepository Thuocs { get; private set; }
 
-
         public IVaiTroRepository VaiTroes
         {
             get; private set;

@@ -18,13 +18,6 @@ namespace BUS.Services
         {
             this.unitOfWork = unitOfWork;
         }
-        public IEnumerable<string> GetName
-        {
-            get
-            {
-                return unitOfWork.BenhNhans.GetName;
-            }
-        }
 
         public void Delete(BenhNhan entity)
         {

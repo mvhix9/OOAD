@@ -14,6 +14,7 @@ namespace BUS
     public class NhanVienServices : INhanVienServices
     {
         private readonly UnitOfWork unitOfWork;
+
         public NhanVienServices(UnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
@@ -77,13 +78,29 @@ namespace BUS
         public void Update(NhanVien entity)
         {
             var nv = unitOfWork.Nhanviens.GetById(entity.MaNhanVien);
+            nv.MaVaiTro = entity.MaVaiTro;
             nv.HoTen = entity.HoTen;
             nv.GioiTinh = entity.GioiTinh;
-            nv.DiaChi = entity.DiaChi;
-            nv.MatKhau = entity.MatKhau;
-            nv.MaVaiTro = entity.MaVaiTro;
             nv.NgaySinh = entity.NgaySinh;
+            nv.DiaChi = entity.DiaChi;
+            nv.TenDangNhap = nv.TenDangNhap;
+            nv.MatKhau = entity.MatKhau;
             unitOfWork.Complete();
+        }
+
+        public NhanVien GetNhanVien(string username, string password)
+        {
+            return unitOfWork.Nhanviens.GetNhanVien(username, password);
+        }
+
+        public bool CheckExistedUsername(string username)
+        {
+            return unitOfWork.Nhanviens.CheckExistedUsername(username);
+        }
+
+        public void Refresh(NhanVien nv)
+        {
+            unitOfWork.Nhanviens.Refresh(nv);
         }
     }
 }

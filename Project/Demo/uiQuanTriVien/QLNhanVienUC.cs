@@ -12,6 +12,7 @@ using DTO;
 using BUS.Interface;
 using BUS.Services;
 using DAO.UnitOfWork;
+using Common;
 
 namespace uiQuanTriVien
 {
@@ -26,7 +27,7 @@ namespace uiQuanTriVien
 
         private void QLNhanVienUC_Load(object sender, EventArgs e)
         {
-            nhanVienBindingSource.DataSource = nhanVienServices.GetAll();
+            nhanVienBindingSource.DataSource = nhanVienServices.Find(nv => nv.MaNhanVien != UserCache.Id).ToList();
             vaiTroBindingSource.DataSource = vaiTroServices.GetAll();
         }
 
@@ -39,24 +40,70 @@ namespace uiQuanTriVien
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void dtgvPhieuKham_CurrentCellChanged(object sender, EventArgs e)
         {
+            NhanVien nv = nhanVienBindingSource.Current as NhanVien;
+            txtHoTen.Text = nv.HoTen;
+            cbGioiTinh.Text = nv.GioiTinh;
+            dtpNgaySinh.Value = (DateTime)nv.NgaySinh;
+            cbVaiTro.SelectedValue = nv.MaVaiTro;
+            txtDiaChi.Text = nv.DiaChi;
+        }
+        
+        private bool validInfo()
+        {
+            bool check = true;
+            if (ValidateInput.isEmpty(txtHoTen))
+            {
+                check = false;
+                MessageBox.Show("Họ và tên còn đang trống");
+                txtHoTen.Focus();
+            }
+            else if (!ValidateInput.isUnicode(txtHoTen))
+            {
+                check = false;
+                MessageBox.Show("Họ và tên không hợp lệ");
+                txtHoTen.Focus();
+            }
+            return check;
+        }
 
+        private string autoCreateUsername(int roleId, int newestUserId)
+        {
+            string username = "";
+            switch (roleId)
+            {
+                case 1:
+                    username = "nhanvien" + newestUserId;
+                    break;
+                case 2:
+                    username = "bacsi" + newestUserId;
+                    break;
+            }
+            return username;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            NhanVien nv = new NhanVien();
-            nv.HoTen = txtHoTen.Text;
-            nv.TenDangNhap = txtTenDangNhap.Text;
-            nv.MatKhau = txtMatKhau.Text;
-            nv.MaVaiTro = Int32.Parse(cbVaiTro.SelectedValue.ToString());
-            nv.GioiTinh = cbGioiTinh.Text;
-            nv.NgaySinh = Convert.ToDateTime(dtpNgaySinh.Text);
-            nv.DiaChi = txtDiaChi.Text;
-            nhanVienServices.Insert(nv);
-            nhanVienBindingSource.DataSource= nhanVienServices.GetAll();
-            MessageBox.Show("Thanh cong");
+            if (validInfo())
+            {
+                NhanVien nv = new NhanVien();
+                nv.MaVaiTro = Int32.Parse(cbVaiTro.SelectedValue.ToString());
+                nv.HoTen = txtHoTen.Text;
+                nv.GioiTinh = cbGioiTinh.Text;
+                nv.NgaySinh = dtpNgaySinh.Value;
+                nv.DiaChi = txtDiaChi.Text;
+                nv.TenDangNhap = "user";
+                nv.MatKhau = HashPassword.ComputeSha256Hash("123456");
+                nhanVienServices.Insert(nv);
+
+                // update TenDangNhap
+                NhanVien updateNV = nhanVienServices.GetById(nv.MaNhanVien);
+                updateNV.TenDangNhap = autoCreateUsername(nv.MaVaiTro, nv.MaNhanVien);
+                nhanVienServices.Update(updateNV);
+                MessageBox.Show("Thêm nhân viên mới thành công");
+                nhanVienBindingSource.DataSource = nhanVienServices.Find(n => n.MaNhanVien != UserCache.Id).ToList();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -66,28 +113,28 @@ namespace uiQuanTriVien
 
             if (MessageBox.Show("Xác nhận xóa Nhân Viên?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                NhanVien nv = new NhanVien();
-                nv = nhanVienBindingSource.Current as NhanVien;
+                NhanVien nv = nhanVienBindingSource.Current as NhanVien;
                 nhanVienServices.Delete(nv);
-                nhanVienBindingSource.DataSource = nhanVienServices.GetAll();
-                MessageBox.Show("Thanh cong");
+                nhanVienBindingSource.DataSource = nhanVienServices.Find(n => n.MaNhanVien != UserCache.Id).ToList();
+                MessageBox.Show("Xoá nhân viên thành công");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NhanVien nv = new NhanVien();
-            nv.MaNhanVien = Int32.Parse(txtMaNV.Text);
-            nv.HoTen = txtHoTen.Text;
-            nv.TenDangNhap = txtTenDangNhap.Text;
-            nv.MatKhau = txtMatKhau.Text;
-            nv.MaVaiTro = Int32.Parse(cbVaiTro.SelectedValue.ToString());
-            nv.GioiTinh = cbGioiTinh.Text;
-            nv.NgaySinh = Convert.ToDateTime(dtpNgaySinh.Text);
-            nv.DiaChi = txtDiaChi.Text;
-            nhanVienServices.Update(nv);
-            nhanVienBindingSource.DataSource = nhanVienServices.GetAll();
-            MessageBox.Show("Thanh cong");
+            if (validInfo())
+            {
+                NhanVien nv = nhanVienBindingSource.Current as NhanVien;
+                nv.MaVaiTro = Int32.Parse(cbVaiTro.SelectedValue.ToString());
+                nv.HoTen = txtHoTen.Text;
+                nv.GioiTinh = cbGioiTinh.Text;
+                nv.NgaySinh = dtpNgaySinh.Value;
+                nv.DiaChi = txtDiaChi.Text;
+                nv.TenDangNhap = autoCreateUsername(nv.MaVaiTro, nv.MaNhanVien);
+                nhanVienServices.Update(nv);
+                MessageBox.Show("Sửa thông tin nhân viên thành công");
+                nhanVienBindingSource.DataSource = nhanVienServices.Find(n => n.MaNhanVien != UserCache.Id).ToList();
+            }
         }
     }
 }

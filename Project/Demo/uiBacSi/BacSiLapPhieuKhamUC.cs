@@ -10,20 +10,26 @@ using System.Windows.Forms;
 using BUS.Services;
 using DAO.UnitOfWork;
 using DTO;
-
+using Common;
 
 namespace uiBacSi
 {
     public partial class BacSiLapPhieuKhamUC : UserControl
     {
-
+        PhieuKhamServices phieuKhamServices = new PhieuKhamServices(new UnitOfWork(new QuanLyPhongMachEntities()));
+        BenhServices benhServices = new BenhServices(new UnitOfWork(new QuanLyPhongMachEntities()));
+        ChiTietBenhServices chiTietBenhServices = new ChiTietBenhServices(new UnitOfWork(new QuanLyPhongMachEntities()));
         public BacSiLapPhieuKhamUC()
         {
             InitializeComponent();
         }
-        PhieuKhamServices phieuKhamServices = new PhieuKhamServices(new UnitOfWork(new QuanLyPhongMachEntities()));
-        BenhServices benhServices = new BenhServices(new UnitOfWork(new QuanLyPhongMachEntities()));
-        ChiTietBenhServices chiTietBenhServices = new ChiTietBenhServices(new UnitOfWork(new QuanLyPhongMachEntities()));
+
+        private void BacSiLapPhieuKhamUC_Load(object sender, EventArgs e)
+        {
+            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
+            benhBindingSource.DataSource = benhServices.GetAll();
+        }
+
         private void btnThemLoaiBenh_Click(object sender, EventArgs e)
         {
             //Chi Them Vao datagirdView
@@ -32,7 +38,7 @@ namespace uiBacSi
                 MessageBox.Show("Vui lòng chọn bệnh");
                 return;
             }
-            if(dataGridViewPhieuKham.CurrentRow == null)
+            if(dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn bệnh nhân");
                 return;
@@ -42,8 +48,8 @@ namespace uiBacSi
             {
                 if(CheckDiseaseName(selecteditem.TenBenh.ToString()))
                 {
-                    MessageBox.Show(selecteditem.MaBenh.ToString());
-                    dataGridViewChiTietBenh.Rows.Add(selecteditem.TenBenh,selecteditem.MaBenh);
+                    //MessageBox.Show(selecteditem.MaBenh.ToString());
+                    dtgvChiTietBenh.Rows.Add(selecteditem.TenBenh,selecteditem.MaBenh);
                 }
             }
             listBenh.ClearSelected();
@@ -51,7 +57,7 @@ namespace uiBacSi
         }
         bool CheckDiseaseName(string tenbenh)
         {
-            foreach(DataGridViewRow row in dataGridViewChiTietBenh.Rows)
+            foreach(DataGridViewRow row in dtgvChiTietBenh.Rows)
             {
                 if (row.Cells[0].Value.ToString() == tenbenh)
                     return false;
@@ -62,13 +68,13 @@ namespace uiBacSi
         private void btnXoaLoaiBenh_Click(object sender, EventArgs e)
         {
             //Chi Xoa o Datgirdview
-            if (dataGridViewPhieuKham.CurrentRow == null)
+            if (dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn bệnh nhân");
                 return;
             }
            
-            if (dataGridViewChiTietBenh.CurrentRow == null)
+            if (dtgvChiTietBenh.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn bệnh");
                 return;
@@ -76,20 +82,20 @@ namespace uiBacSi
             //Them DeleteRange
             //ChiTietBenh ctb = new ChiTietBenh();
             //ctb.MaBenh = Int32.Parse(dataGridViewChiTietBenh.CurrentRow.Cells[1].Value.ToString());
-            //ctb.MaPhieuKham = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
+            //ctb.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
             //MessageBox.Show(ctb.MaPhieuKham.ToString());
             //MessageBox.Show(ctb.MaBenh.ToString());
             //chiTietBenhServices.Delete(ctb);
-            foreach (DataGridViewRow item in dataGridViewChiTietBenh.SelectedRows)
+            foreach (DataGridViewRow item in dtgvChiTietBenh.SelectedRows)
             {
-                dataGridViewChiTietBenh.Rows.RemoveAt(item.Index);
+                dtgvChiTietBenh.Rows.RemoveAt(item.Index);
             }
             MessageBox.Show("Xóa thành công");
         }
 
         private void btnLuuPhieuKham_Click(object sender, EventArgs e)
         {
-            if (dataGridViewPhieuKham.CurrentRow == null)
+            if (dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn bệnh nhân");
                 return;
@@ -99,54 +105,46 @@ namespace uiBacSi
                 MessageBox.Show("Vui lòng nhập triệu chứng");
                 return;
             }
+            //PhieuKham current = modelPhieuKhamBindingSource.Current as PhieuKham;
             PhieuKham pk = new PhieuKham();
-            pk.MaPhieuKham = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
-            pk.MaBenhNhan = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[1].Value.ToString());
-            pk.MaNhanVien = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[2].Value.ToString());
-            pk.NgayKham = Convert.ToDateTime(dataGridViewPhieuKham.CurrentRow.Cells[3].Value.ToString());
+            pk.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
+            pk.MaBenhNhan = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells["MaBenhNhan"].Value.ToString());
+            pk.MaNhanVien = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells["MaNhanVien"].Value.ToString());
+            pk.NgayKham = Convert.ToDateTime(dtgvPhieuKham.CurrentRow.Cells[5].Value.ToString());
             pk.TrieuChung = txtTrieuChung.Text;
             pk.TrangThai = "Đã chẩn đoán";
             phieuKhamServices.Update(pk);
-            int mapk = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
-            foreach (DataGridViewRow row in dataGridViewChiTietBenh.Rows)
+            foreach (DataGridViewRow row in dtgvChiTietBenh.Rows)
             {
                 ChiTietBenh ctb = new ChiTietBenh();               
-                int mabenh = Int32.Parse(row.Cells[1].Value.ToString());
+                int mabenh = Int32.Parse(row.Cells["MaBenh"].Value.ToString());
                 ctb.MaBenh = mabenh;
-                ctb.MaPhieuKham = mapk;
+                ctb.MaPhieuKham = pk.MaPhieuKham;
                 chiTietBenhServices.Insert(ctb);
             }
-            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(2);
+            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
             MessageBox.Show("Lưu thành công");
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
-            //TODO
             TraCuuBenhNhan frm = new TraCuuBenhNhan();
             frm.Show();
         }
 
-        
 
-        private void BacSiLapPhieuKhamUC_Load(object sender, EventArgs e)
+        private void dtgvPhieuKham_CurrentCellChanged(object sender, EventArgs e)
         {
-            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(2);
-            benhBindingSource.DataSource = benhServices.GetAll();
-        }
-
-        private void dataGridViewPhieuKham_CurrentCellChanged(object sender, EventArgs e)
-        {
-            dataGridViewChiTietBenh.Rows.Clear();
+            dtgvChiTietBenh.Rows.Clear();
             if (radPKHoanThanh.Checked == true)
             {
-                if (dataGridViewPhieuKham.CurrentRow != null)
+                if (dtgvPhieuKham.CurrentRow != null)
                 {
-                    int maPK = Int32.Parse(dataGridViewPhieuKham.CurrentRow.Cells[0].Value.ToString());
+                    int maPK = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
                     IEnumerable<Benh> dsBenh = chiTietBenhServices.GetNameById(maPK);
                     foreach (Benh b in dsBenh)
                     {
-                        dataGridViewChiTietBenh.Rows.Add(b.TenBenh.ToString(), b.MaBenh.ToString());
+                        dtgvChiTietBenh.Rows.Add(b.TenBenh.ToString(), b.MaBenh.ToString());
                     }
                 }
             }
@@ -159,7 +157,7 @@ namespace uiBacSi
             {
                 if (rb.Checked)
                 {
-                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(2);
+                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
                 }
             }
         }
@@ -172,7 +170,7 @@ namespace uiBacSi
             {
                 if (rb.Checked)
                 {
-                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(2);
+                    modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
                 }
             }
         }

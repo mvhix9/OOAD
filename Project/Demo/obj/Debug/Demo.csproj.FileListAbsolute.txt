@@ -69,3 +69,40 @@ E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiBacSi.LapDonThuocUC
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QuanTriVienFRM.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QLNhanVienUC.resources
 E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.XemBaoCaoUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Demo.exe.config
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.exe
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Demo.exe
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Demo.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\BUS.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Common.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\DAO.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\DTO.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\EntityFramework.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\EntityFramework.SqlServer.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\BUS.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Common.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\DAO.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\DTO.pdb
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\EntityFramework.xml
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\EntityFramework.SqlServer.xml
+E:\IT\OOAD\OOAD\Project\Demo\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiBacSi.BACSIFRM.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiBacSi.BacSiLapPhieuKhamUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiBacSi.LapDonThuocUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiBacSi.TraCuuBenhNhan.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.NhanVienLapPhieuKhamUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QLNhanVienUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiNhanVien.NhanVienFRM.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.MainFRM.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.Properties.Resources.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLThuocUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QuanTriVienFRM.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.XemBaoCaoUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiNhanVien.QLBenhNhanUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.TuyChonUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.IndexUC.resources
+E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLBenhUC.resources

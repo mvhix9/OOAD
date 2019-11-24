@@ -21,7 +21,7 @@ namespace DTO
         }
     
         public int MaNhanVien { get; set; }
-        public Nullable<int> MaVaiTro { get; set; }
+        public int MaVaiTro { get; set; }
         public string HoTen { get; set; }
         public string GioiTinh { get; set; }
         public Nullable<System.DateTime> NgaySinh { get; set; }

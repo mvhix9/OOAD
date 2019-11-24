@@ -72,6 +72,8 @@ namespace BUS.Services
         {
             var t = unitOfWork.Thuocs.GetById(entity.MaThuoc);
             t.TenThuoc = entity.TenThuoc;
+            t.SoLuongTon = entity.SoLuongTon;
+            t.DonVi = entity.DonVi;
             t.DonGia = entity.DonGia;
             unitOfWork.Complete();
         }

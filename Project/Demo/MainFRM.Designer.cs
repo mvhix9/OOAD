@@ -137,7 +137,7 @@
             this.contentPanel.Location = new System.Drawing.Point(0, 54);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(744, 387);
-            this.contentPanel.TabIndex = 3;
+            this.contentPanel.TabIndex = 4;
             // 
             // lblError
             // 
@@ -149,7 +149,7 @@
             this.lblError.Location = new System.Drawing.Point(344, 145);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(57, 20);
-            this.lblError.TabIndex = 8;
+            this.lblError.TabIndex = 0;
             this.lblError.Text = "Text lỗi";
             this.lblError.Visible = false;
             // 
@@ -191,7 +191,7 @@
             this.btnLogin.Location = new System.Drawing.Point(271, 257);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(202, 46);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.TabStop = false;
             this.btnLogin.Text = "ĐĂNG NHẬP";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             this.txtPassword.Location = new System.Drawing.Point(254, 209);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(241, 20);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "MẬT KHẨU";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -222,7 +222,7 @@
             this.txtUsername.Location = new System.Drawing.Point(254, 174);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(241, 20);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.TabStop = false;
             this.txtUsername.Text = "TÊN ĐĂNG NHẬP";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
@@ -249,7 +249,7 @@
             this.lineShapePassword,
             this.lineShapeUsername});
             this.shapeContainer1.Size = new System.Drawing.Size(744, 387);
-            this.shapeContainer1.TabIndex = 3;
+            this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
             // lineShapePassword

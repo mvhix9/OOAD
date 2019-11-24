@@ -22,8 +22,8 @@ namespace DTO
         }
     
         public int MaPhieuKham { get; set; }
-        public Nullable<int> MaBenhNhan { get; set; }
-        public Nullable<int> MaNhanVien { get; set; }
+        public int MaBenhNhan { get; set; }
+        public int MaNhanVien { get; set; }
         public string TrieuChung { get; set; }
         public Nullable<System.DateTime> NgayKham { get; set; }
         public string TrangThai { get; set; }

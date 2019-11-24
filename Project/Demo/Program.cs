@@ -23,10 +23,10 @@ namespace Demo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new NhanVienFRM());
-            //Application.Run(new MainFRM());
+            Application.Run(new MainFRM());
             //Application.Run(new TraCuuBenhNhan());
             //Application.Run(new BACSIFRM());
-            Application.Run(new QuanTriVienFRM());
+            //Application.Run(new QuanTriVienFRM());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

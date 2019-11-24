@@ -21,7 +21,8 @@ namespace uiQuanTriVien
         {
             InitializeComponent();
         }
-        IBaoCaoServices baoCaoServices = new BaoCaoServices(new UnitOfWork(new QuanLyPhongMachEntities()));
+        BaoCaoServices baoCaoServices = new BaoCaoServices(new UnitOfWork(new QuanLyPhongMachEntities()));
+
         private void XemBaoCaoUC_Load(object sender, EventArgs e)
         {
             cbBaoCao.SelectedIndex = 0;
@@ -31,30 +32,36 @@ namespace uiQuanTriVien
         {
             DateTime start = Convert.ToDateTime(dtpStart.Text.ToString());
             DateTime end = Convert.ToDateTime(dtpEnd.Text.ToString());
-            string choice = cbBaoCao.SelectedItem.ToString();
-            if (choice == "Doanh Thu" )
+            int choice = cbBaoCao.SelectedIndex;
+            switch (choice)
             {
-                dataGridView2.Visible = false;
-                dataGridView1.Visible = true;
-                modelBaoCaoDoanhThuBindingSource.DataSource = baoCaoServices.GetModelDoanhThu(start, end);
+                case 1:
+                    dtgvBaoCaoSLT.Visible = false;
+                    dtgvBaoCaoDT.Visible = true;
+                    modelBaoCaoDoanhThuBindingSource.DataSource = baoCaoServices.GetModelDoanhThu(start, end);
 
-                double? TongDoanhThu = 0;
-                foreach(ModelBaoCaoDoanhThu baocao in baoCaoServices.GetModelDoanhThu(start, end))
-                {
-                    TongDoanhThu += baocao.TongTien;
-                }
+                    double? tongDoanhThu = 0;
+                    foreach(ModelBaoCaoDoanhThu baocao in baoCaoServices.GetModelDoanhThu(start, end))
+                    {
+                        tongDoanhThu += baocao.TongTien;
+                    }
 
-                lbTongDoanhThu.Visible = true;
-                txtTongDoanhThu.Visible = true;
-                txtTongDoanhThu.Text = TongDoanhThu.ToString();
-            }
-            if(choice == "Thuốc")
-            {
-                dataGridView1.Visible = false;
-                dataGridView2.Visible = true;
-                modelBaoCaoThuocBindingSource.DataSource = baoCaoServices.GetModelThuoc(start, end);
-                lbTongDoanhThu.Visible = false;
-                txtTongDoanhThu.Visible = false;
+                    lbTongDoanhThu.Visible = true;
+                    txtTongDoanhThu.Visible = true;
+                    txtTongDoanhThu.Text = tongDoanhThu.ToString();
+                    txtTongDoanhThu.TextAlign = HorizontalAlignment.Right;
+                    break;
+                case 2:
+                    dtgvBaoCaoDT.Visible = false;
+                    dtgvBaoCaoSLT.Visible = true;
+                    modelBaoCaoThuocBindingSource.DataSource = baoCaoServices.GetModelThuoc(start, end);
+                    lbTongDoanhThu.Visible = false;
+                    txtTongDoanhThu.Visible = false;
+                    break;
+                default:
+                    MessageBox.Show("Hãy chọn loại báo cáo cần xem");
+                    cbBaoCao.Focus();
+                    break;
             }
         }
     }

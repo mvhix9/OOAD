@@ -21,6 +21,7 @@ namespace uiBacSi
         }
         BenhNhanServices benhNhanServices = new BenhNhanServices(new UnitOfWork(new QuanLyPhongMachEntities()));
         PhieuKhamServices phieuKhamServices = new PhieuKhamServices(new UnitOfWork(new QuanLyPhongMachEntities())); 
+
         private void TraCuuBenhNhan_Load(object sender, EventArgs e)
         {
             benhNhanBindingSource.DataSource = benhNhanServices.GetAll();

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Common;
 using Demo.uiNhanVien;
 using uiNhanVien;
+using Demo;
 
 namespace uiNhanVien
 {
@@ -19,34 +20,20 @@ namespace uiNhanVien
         {
             InitializeComponent();
         }
-        #region Demochangepanel
-        //static nhanvienfrm obj;
-        //public static nhanvienfrm instance
-        //{
-        //    get
-        //    {
-        //        if (obj == null)
-        //        {
-        //            obj = new nhanvienfrm();
-        //        }
-        //        return obj;
-        //    }
-        //}
 
-        //public panel contentpanel
-        //{
-        //    get { return contentpanel; }
-        //    set { contentpanel = value; }
-        //}
-        #endregion
-        private void NhanVienFRM_Load(object sender, EventArgs e)
+        public void NhanVienFRM_Load(object sender, EventArgs e)
         {
-            this.Select();
             lblName.Text = UserCache.Name;
+            int left = (lblName.Parent.Width - lblName.Width) / 2;
+            centerLocation(lblName, left, 146);
             lblRole.Text = UserCache.Role;
             btnIndex.selected = true;
             btnIndex_Click(sender, e);
-            //obj = this;
+        }
+
+        public static void centerLocation(Control control, int x, int y)
+        {
+            control.Location = new Point(x, y);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -101,17 +88,15 @@ namespace uiNhanVien
             loadUserControl(contentPanel, new IndexUC());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnQLBenhNhan_Click(object sender, EventArgs e)
         {
-            moveActivePanel(btnQLBN);
+            moveActivePanel(btnQLBenhNhan);
             loadUserControl(contentPanel, new QLBenhNhanUC());
-            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnQLThuoc_Click(object sender, EventArgs e)
         {
-           
-            moveActivePanel(button2);
+            moveActivePanel(btnQLThuoc);
             loadUserControl(contentPanel, new QLThuocUC());
         }
 
@@ -119,6 +104,18 @@ namespace uiNhanVien
         {
             moveActivePanel(btnLapPhieuKham);
             loadUserControl(contentPanel, new NhanVienLapPhieuKhamUC());
+        }
+
+        private void btnTuyChon_Click(object sender, EventArgs e)
+        {
+            moveActivePanel(btnTuyChon);
+            loadUserControl(contentPanel, new TuyChonUC());
+        }
+
+        private void btnQLBenh_Click(object sender, EventArgs e)
+        {
+            moveActivePanel(btnQLBenh);
+            loadUserControl(contentPanel, new QLBenhUC());
         }
     }
 }

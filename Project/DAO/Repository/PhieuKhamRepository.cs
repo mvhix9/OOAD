@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq.Expressions;
 
 namespace DAO.Repository
 {
@@ -65,6 +66,7 @@ namespace DAO.Repository
                         };
             return model.ToList();
         }
+
         public List<ModelTraCuuBenhNhan> GetModelTraCuu(int id,DateTime start,DateTime end)
         {
             List<ModelRowBenh> Rows = new List<ModelRowBenh>();
@@ -206,6 +208,28 @@ namespace DAO.Repository
                             TrangThai = m.TrangThai
                         };
             return model.ToList();
+        }
+
+        public IEnumerable<ModelPhieuKham> Find(Expression<Func<ModelPhieuKham, bool>> predicate)
+        {
+            var model = from m in context.PhieuKhams
+                        join n in context.NhanViens
+                        on m.MaNhanVien equals n.MaNhanVien
+                        join b in context.BenhNhans
+                        on m.MaBenhNhan equals b.MaBenhNhan
+                        select new ModelPhieuKham
+                        {
+                            MaPhieuKham = m.MaPhieuKham,
+                            MaNhanVien = n.MaNhanVien,
+                            MaBenhNhan = b.MaBenhNhan,
+                            TenNV = n.HoTen,
+                            TenBN = b.HoTen,
+                            TrieuChung = m.TrieuChung,
+                            NgayKham = m.NgayKham,
+                            ChiTietBenhs = m.ChiTietBenhs,
+                            TrangThai = m.TrangThai
+                        };
+            return model.Where(predicate).ToList();
         }
     }
 }

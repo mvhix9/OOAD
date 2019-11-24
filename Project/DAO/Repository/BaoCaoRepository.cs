@@ -57,7 +57,7 @@ namespace DAO.Repository
 
                         select new ModelBaoCaoThuoc
                         {
-                            SoLuong = result.Sum(a => a.ctdt.SoLuong),
+                            SoLuong = result.Sum(a => a.ctdt.SoLuong.Value),
                             TenThuoc = result.FirstOrDefault().thuoc.TenThuoc
                         };
             return model.ToList();

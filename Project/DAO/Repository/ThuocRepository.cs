@@ -28,7 +28,7 @@ namespace DAO.Repository
 
         public double GetPriceById(int id)
         {
-            double dongia = context.Thuocs.Where(t => t.MaThuoc == id).FirstOrDefault().DonGia;
+            double dongia = context.Thuocs.Where(t => t.MaThuoc == id).FirstOrDefault().DonGia.Value;
             return dongia;
         }
     }
