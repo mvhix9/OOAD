@@ -43,6 +43,8 @@
             this.radChuaLapDonThuoc = new System.Windows.Forms.RadioButton();
             this.radDaLapDonThuoc = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.txtSoLuongTon = new System.Windows.Forms.TextBox();
             this.cbThuoc = new System.Windows.Forms.ComboBox();
             this.dtgvChiTietDT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.MaThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +68,7 @@
             this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trieuChungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBenh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayKhamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.thuocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelPhieuKhamBindingSource)).BeginInit();
@@ -152,6 +153,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thuốc";
             // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTongTien.ForeColor = System.Drawing.Color.Black;
+            this.lblTongTien.Location = new System.Drawing.Point(390, 334);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(72, 20);
+            this.lblTongTien.TabIndex = 39;
+            this.lblTongTien.Text = "Tổng tiền";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Enabled = false;
+            this.txtTongTien.Location = new System.Drawing.Point(468, 331);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(144, 27);
+            this.txtTongTien.TabIndex = 38;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -224,6 +245,7 @@
             this.btnXoa.TabIndex = 31;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -237,6 +259,7 @@
             this.btnThem.TabIndex = 30;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSoLuongTon
             // 
@@ -276,7 +299,7 @@
             this.dtgvChiTietDT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -319,26 +342,6 @@
             this.dtgvChiTietDT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvChiTietDT.Size = new System.Drawing.Size(597, 292);
             this.dtgvChiTietDT.TabIndex = 27;
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTongTien.ForeColor = System.Drawing.Color.Black;
-            this.lblTongTien.Location = new System.Drawing.Point(390, 334);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(72, 20);
-            this.lblTongTien.TabIndex = 39;
-            this.lblTongTien.Text = "Tổng tiền";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Enabled = false;
-            this.txtTongTien.Location = new System.Drawing.Point(468, 331);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(144, 27);
-            this.txtTongTien.TabIndex = 38;
             // 
             // MaThuoc
             // 
@@ -404,6 +407,7 @@
             this.MaNhanVien,
             this.tenBNDataGridViewTextBoxColumn,
             this.trieuChungDataGridViewTextBoxColumn,
+            this.TenBenh,
             this.ngayKhamDataGridViewTextBoxColumn});
             this.dtgvPhieuKham.DataSource = this.modelPhieuKhamBindingSource;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -442,6 +446,7 @@
             this.maPhieuKhamDataGridViewTextBoxColumn.HeaderText = "Mã phiếu khám";
             this.maPhieuKhamDataGridViewTextBoxColumn.Name = "maPhieuKhamDataGridViewTextBoxColumn";
             this.maPhieuKhamDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maPhieuKhamDataGridViewTextBoxColumn.Visible = false;
             // 
             // MaBenhNhan
             // 
@@ -472,6 +477,13 @@
             this.trieuChungDataGridViewTextBoxColumn.HeaderText = "Triệu chứng";
             this.trieuChungDataGridViewTextBoxColumn.Name = "trieuChungDataGridViewTextBoxColumn";
             this.trieuChungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // TenBenh
+            // 
+            this.TenBenh.DataPropertyName = "TenBenh";
+            this.TenBenh.HeaderText = "Bệnh";
+            this.TenBenh.Name = "TenBenh";
+            this.TenBenh.ReadOnly = true;
             // 
             // ngayKhamDataGridViewTextBoxColumn
             // 
@@ -536,6 +548,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenBNDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trieuChungDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenBenh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayKhamDataGridViewTextBoxColumn;
     }
 }

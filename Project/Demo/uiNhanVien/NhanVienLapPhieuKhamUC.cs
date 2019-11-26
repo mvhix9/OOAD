@@ -30,7 +30,7 @@ namespace Demo.uiNhanVien
 
         private void LapPhieuKhamUC_Load(object sender, EventArgs e)
         {
-            benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+            benhNhanBindingSource.DataSource = benhNhanServices.Find(bn => bn.TrangThai==1).ToList();
             nhanVienBindingSource.DataSource = nhanVienServices.GetDoctor;
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModel();
         }
@@ -78,7 +78,7 @@ namespace Demo.uiNhanVien
             if (pk != null)
             {
                 cbTenBenhNhan.Text = pk.TenBN;
-                cbTenBacSi.Text = pk.TenNV;
+                cbTenBacSi.SelectedValue = pk.MaNhanVien;
             }
         }
 

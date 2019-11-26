@@ -24,7 +24,7 @@ namespace uiBacSi
 
         private void TraCuuBenhNhan_Load(object sender, EventArgs e)
         {
-            benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+            benhNhanBindingSource.DataSource = benhNhanServices.Find(b =>b.TrangThai ==1).ToList();
         }
 
         private void btnXem_Click(object sender, EventArgs e)

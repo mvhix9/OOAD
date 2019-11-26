@@ -26,7 +26,7 @@ namespace uiNhanVien
 
         private void QLBenhNhanUC_Load(object sender, EventArgs e)
         {
-            benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+            benhNhanBindingSource.DataSource = benhNhanServices.Find(bn => bn.TrangThai==1).ToList();
             
         }
 
@@ -57,8 +57,9 @@ namespace uiNhanVien
                 bn.GioiTinh = cbGioiTinh.Text;
                 bn.NgaySinh = Convert.ToDateTime(dtpNgaySinh.Text);
                 bn.DiaChi = txtDiaChi.Text;
+                bn.TrangThai = 1;
                 benhNhanServices.Insert(bn);
-                benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+                benhNhanBindingSource.DataSource = benhNhanServices.Find(benhnhan =>benhnhan.TrangThai ==1).ToList();
                 MessageBox.Show("Thêm bệnh nhân thành công");
             }
         }
@@ -70,8 +71,9 @@ namespace uiNhanVien
             if (MessageBox.Show("Xác nhận xóa bệnh nhân ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 BenhNhan bn = benhNhanBindingSource.Current as BenhNhan;
-                benhNhanServices.Delete(bn);
-                benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+                bn.TrangThai = 0;
+                benhNhanServices.Update(bn);
+                benhNhanBindingSource.DataSource = benhNhanServices.Find(benhnhan => benhnhan.TrangThai == 1).ToList();
             }
         }
 
@@ -84,8 +86,9 @@ namespace uiNhanVien
                 bn.GioiTinh = cbGioiTinh.Text;
                 bn.NgaySinh = Convert.ToDateTime(dtpNgaySinh.Text);
                 bn.DiaChi = txtDiaChi.Text;
+                bn.TrangThai = 1;
                 benhNhanServices.Update(bn);
-                benhNhanBindingSource.DataSource = benhNhanServices.GetAll();
+                benhNhanBindingSource.DataSource = benhNhanServices.Find(benhnhan=> benhnhan.TrangThai==1).ToList();
                 MessageBox.Show("Sửa thông tin bệnh nhân thành công");
             }
         }
@@ -112,7 +115,7 @@ namespace uiNhanVien
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            var list = benhNhanServices.GetAll();
+            var list = benhNhanServices.Find(bn => bn.TrangThai == 1).ToList();
             if (!String.IsNullOrEmpty(txtTimKiem.Text))
             {
                 list = benhNhanServices.Find(b => b.HoTen.ToLower().Contains(txtTimKiem.Text.ToLower())).ToList();

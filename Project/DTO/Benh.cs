@@ -22,6 +22,7 @@ namespace DTO
     
         public int MaBenh { get; set; }
         public string TenBenh { get; set; }
+        public int TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietBenh> ChiTietBenhs { get; set; }

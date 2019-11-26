@@ -5,35 +5,37 @@
       <PropertyRef Name="MaBenh" />
     </Key>
     <Property Name="MaBenh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenBenh" Type="nvarchar" MaxLength="255" />
+    <Property Name="TenBenh" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BenhNhan">
     <Key>
       <PropertyRef Name="MaBenhNhan" />
     </Key>
     <Property Name="MaBenhNhan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
-    <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="NgaySinh" Type="date" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietBenh">
     <Key>
       <PropertyRef Name="STT" />
     </Key>
     <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaPhieuKham" Type="int" />
-    <Property Name="MaBenh" Type="int" />
+    <Property Name="MaPhieuKham" Type="int" Nullable="false" />
+    <Property Name="MaBenh" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietDonThuoc">
     <Key>
       <PropertyRef Name="SoThuTu" />
     </Key>
     <Property Name="SoThuTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaThuoc" Type="int" />
+    <Property Name="MaThuoc" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="ThanhTien" Type="float" />
-    <Property Name="MaDonThuoc" Type="int" />
+    <Property Name="MaDonThuoc" Type="int" Nullable="false" />
     <Property Name="CachDung" Type="nvarchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="DonThuoc">
@@ -41,7 +43,7 @@
       <PropertyRef Name="MaDonThuoc" />
     </Key>
     <Property Name="MaDonThuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaPhieuKham" Type="int" />
+    <Property Name="MaPhieuKham" Type="int" Nullable="false" />
     <Property Name="TongTien" Type="float" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -49,54 +51,46 @@
       <PropertyRef Name="MaNhanVien" />
     </Key>
     <Property Name="MaNhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaVaiTro" Type="int" />
-    <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
-    <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaVaiTro" Type="int" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="NgaySinh" Type="date" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
     <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PhieuKham">
     <Key>
       <PropertyRef Name="MaPhieuKham" />
     </Key>
     <Property Name="MaPhieuKham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MaBenhNhan" Type="int" />
-    <Property Name="MaNhanVien" Type="int" />
+    <Property Name="MaBenhNhan" Type="int" Nullable="false" />
+    <Property Name="MaNhanVien" Type="int" Nullable="false" />
     <Property Name="TrieuChung" Type="nvarchar" MaxLength="255" />
     <Property Name="NgayKham" Type="date" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Thuoc">
     <Key>
       <PropertyRef Name="MaThuoc" />
     </Key>
     <Property Name="MaThuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenThuoc" Type="nvarchar" MaxLength="100" />
+    <Property Name="TenThuoc" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="DonGia" Type="float" />
     <Property Name="SoLuongTon" Type="int" />
     <Property Name="DonVi" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="VaiTro">
     <Key>
       <PropertyRef Name="MaVaiTro" />
     </Key>
     <Property Name="MaVaiTro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenVaiTro" Type="nvarchar" MaxLength="100" />
+    <Property Name="TenVaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_ChiTietBenh_MaBenh">
-    <End Role="Benh" Type="Self.Benh" Multiplicity="0..1" />
+    <End Role="Benh" Type="Self.Benh" Multiplicity="1" />
     <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Benh">
@@ -108,7 +102,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChiTietBenh_MaPhieuKham">
-    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="1" />
     <End Role="ChiTietBenh" Type="Self.ChiTietBenh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhieuKham">
@@ -120,7 +114,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChiTietDonThuoc_MaDonThuoc">
-    <End Role="DonThuoc" Type="Self.DonThuoc" Multiplicity="0..1" />
+    <End Role="DonThuoc" Type="Self.DonThuoc" Multiplicity="1" />
     <End Role="ChiTietDonThuoc" Type="Self.ChiTietDonThuoc" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DonThuoc">
@@ -132,7 +126,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChiTietDonThuoc_MaThuoc">
-    <End Role="Thuoc" Type="Self.Thuoc" Multiplicity="0..1" />
+    <End Role="Thuoc" Type="Self.Thuoc" Multiplicity="1" />
     <End Role="ChiTietDonThuoc" Type="Self.ChiTietDonThuoc" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Thuoc">
@@ -144,7 +138,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_DonThuoc_MaPhieuKham">
-    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="0..1" />
+    <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="1" />
     <End Role="DonThuoc" Type="Self.DonThuoc" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhieuKham">
@@ -156,7 +150,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_NhanVien_MaVaiTro">
-    <End Role="VaiTro" Type="Self.VaiTro" Multiplicity="0..1" />
+    <End Role="VaiTro" Type="Self.VaiTro" Multiplicity="1" />
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="VaiTro">
@@ -168,7 +162,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PhieuKham_MaBenhNhan">
-    <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="0..1" />
+    <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
     <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BenhNhan">
@@ -180,7 +174,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PhieuKham_MaNhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -199,7 +193,6 @@
     <EntitySet Name="DonThuoc" EntityType="Self.DonThuoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuKham" EntityType="Self.PhieuKham" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Thuoc" EntityType="Self.Thuoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VaiTro" EntityType="Self.VaiTro" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ChiTietBenh_MaBenh" Association="Self.FK_ChiTietBenh_MaBenh">

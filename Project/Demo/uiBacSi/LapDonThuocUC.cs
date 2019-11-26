@@ -29,27 +29,9 @@ namespace uiBacSi
         private void LapDonThuocUC_Load(object sender, EventArgs e)
         {
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
-            thuocBindingSource.DataSource = thuocServices.GetAll();
+            thuocBindingSource.DataSource = thuocServices.Find(t => t.TrangThai.Equals(1)).ToList();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if(dtgvPhieuKham.CurrentRow == null)
-            {
-                MessageBox.Show("Vui lòng chọn phiếu khám.");
-                return;
-            }
-            if(CheckTextBox()==true)
-            {
-                string tenthuoc = cbThuoc.Text;
-                int mathuoc = Int32.Parse(cbThuoc.SelectedValue.ToString());
-                string cachdung = txtCachDung.Text;
-                double dongia = thuocServices.GetPriceById(mathuoc);
-                int soluong = Int32.Parse(txtSoLuong.Text.ToString());
-                double thanhtien = dongia * soluong;
-                dtgvChiTietDT.Rows.Add(mathuoc, tenthuoc, soluong, cachdung, dongia, thanhtien);
-            }
-        }
         bool CheckTextBox()
         {
             
@@ -89,6 +71,37 @@ namespace uiBacSi
             return true;
         }
 
+        private void caculateTotal()
+        {
+            double tongTien = 0;
+            foreach (DataGridViewRow row in dtgvChiTietDT.Rows)
+            {
+                tongTien += Double.Parse(row.Cells["ThanhTien"].Value.ToString());
+            }
+            txtTongTien.Text = tongTien.ToString();
+            txtTongTien.TextAlign = HorizontalAlignment.Right;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (dtgvPhieuKham.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn phiếu khám.");
+                return;
+            }
+            if (CheckTextBox() == true)
+            {
+                string tenthuoc = cbThuoc.Text;
+                int mathuoc = Int32.Parse(cbThuoc.SelectedValue.ToString());
+                string cachdung = txtCachDung.Text;
+                double dongia = thuocServices.GetPriceById(mathuoc);
+                int soluong = Int32.Parse(txtSoLuong.Text.ToString());
+                double thanhtien = dongia * soluong;
+                dtgvChiTietDT.Rows.Add(mathuoc, tenthuoc, soluong, cachdung, dongia, thanhtien);
+                caculateTotal();
+            }
+        }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if(dtgvChiTietDT.CurrentRow == null)
@@ -97,7 +110,8 @@ namespace uiBacSi
                 return;
             }
             dtgvChiTietDT.Rows.RemoveAt(dtgvChiTietDT.CurrentRow.Index);
-            MessageBox.Show("Xóa thành công.");
+            caculateTotal();
+            MessageBox.Show("Xóa thành công");
         }
 
         private void btnLuuDonThuoc_Click(object sender, EventArgs e)
@@ -105,6 +119,7 @@ namespace uiBacSi
             if(dtgvPhieuKham.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn phiếu khám.");
+                txtTongTien.Text= "";
                 return;
             }
 
@@ -174,24 +189,30 @@ namespace uiBacSi
 
         private void radChuaLapDonThuoc_CheckedChanged(object sender, EventArgs e)
         {
+            txtTongTien.Clear();
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
                 if (rb.Checked)
                 {
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
+                    btnThem.Enabled = true;
+                    btnXoa.Enabled = true;
                 }
             }
         }
 
         private void radDaLapDonThuoc_CheckedChanged(object sender, EventArgs e)
         {
+            txtTongTien.Clear();
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
                 if (rb.Checked)
                 {
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelHasDonThuocByIdDoctor(UserCache.Id);
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = false;
                 }
             }
         }

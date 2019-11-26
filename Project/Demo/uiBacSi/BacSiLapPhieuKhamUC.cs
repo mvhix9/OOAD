@@ -27,7 +27,7 @@ namespace uiBacSi
         private void BacSiLapPhieuKhamUC_Load(object sender, EventArgs e)
         {
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
-            benhBindingSource.DataSource = benhServices.GetAll();
+            benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
         }
 
         private void btnThemLoaiBenh_Click(object sender, EventArgs e)
@@ -79,13 +79,7 @@ namespace uiBacSi
                 MessageBox.Show("Vui lòng chọn bệnh");
                 return;
             }
-            //Them DeleteRange
-            //ChiTietBenh ctb = new ChiTietBenh();
-            //ctb.MaBenh = Int32.Parse(dataGridViewChiTietBenh.CurrentRow.Cells[1].Value.ToString());
-            //ctb.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
-            //MessageBox.Show(ctb.MaPhieuKham.ToString());
-            //MessageBox.Show(ctb.MaBenh.ToString());
-            //chiTietBenhServices.Delete(ctb);
+            
             foreach (DataGridViewRow item in dtgvChiTietBenh.SelectedRows)
             {
                 dtgvChiTietBenh.Rows.RemoveAt(item.Index);
@@ -158,6 +152,11 @@ namespace uiBacSi
                 if (rb.Checked)
                 {
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
+                    btnLuuPhieuKham.Enabled = true;
+                    btnThemLoaiBenh.Enabled = true;
+                    btnXoaLoaiBenh.Enabled = true;
+                    txtTrieuChung.Enabled = true;
+                    txtTrieuChung.ReadOnly = false;
                 }
             }
         }
@@ -171,6 +170,11 @@ namespace uiBacSi
                 if (rb.Checked)
                 {
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
+                    btnLuuPhieuKham.Enabled = false;
+                    btnThemLoaiBenh.Enabled = false;
+                    btnXoaLoaiBenh.Enabled = false;
+                    txtTrieuChung.Enabled = false;
+                    txtTrieuChung.ReadOnly = true;
                 }
             }
         }

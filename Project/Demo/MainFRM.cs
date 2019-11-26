@@ -25,6 +25,7 @@ namespace Demo
         public MainFRM()
         {
             InitializeComponent();
+            txtUsername.Focus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -145,6 +146,11 @@ namespace Demo
                 if (nv == null)
                 {
                     msgError("Tên đăng nhập hoặc mật khẩu không đúng");
+                    txtUsername.Focus();
+                }
+                else if(nv.TrangThai == 0)
+                {
+                    msgError("Tài khoản đã bị khóa");
                     txtUsername.Focus();
                 }
                 else

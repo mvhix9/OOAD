@@ -25,7 +25,7 @@ namespace DAO
             get
             {
                 var doctor = from n in context.NhanViens
-                             where n.MaVaiTro == 2
+                             where n.MaVaiTro == 2 && n.TrangThai==1
                              select n;
                 return doctor.ToList();
             }

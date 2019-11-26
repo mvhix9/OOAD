@@ -312,6 +312,7 @@
             // 
             this.dtgvPhieuKham.AllowUserToAddRows = false;
             this.dtgvPhieuKham.AllowUserToDeleteRows = false;
+            this.dtgvPhieuKham.AllowUserToOrderColumns = true;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.dtgvPhieuKham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvPhieuKham.AutoGenerateColumns = false;
@@ -349,7 +350,7 @@
             this.dtgvPhieuKham.EnableHeadersVisualStyles = false;
             this.dtgvPhieuKham.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.dtgvPhieuKham.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgvPhieuKham.Location = new System.Drawing.Point(17, 50);
+            this.dtgvPhieuKham.Location = new System.Drawing.Point(17, 53);
             this.dtgvPhieuKham.Name = "dtgvPhieuKham";
             this.dtgvPhieuKham.ReadOnly = true;
             this.dtgvPhieuKham.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

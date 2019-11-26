@@ -83,7 +83,7 @@ namespace BUS
             nv.GioiTinh = entity.GioiTinh;
             nv.NgaySinh = entity.NgaySinh;
             nv.DiaChi = entity.DiaChi;
-            nv.TenDangNhap = nv.TenDangNhap;
+            nv.TenDangNhap = entity.TenDangNhap;
             nv.MatKhau = entity.MatKhau;
             unitOfWork.Complete();
         }

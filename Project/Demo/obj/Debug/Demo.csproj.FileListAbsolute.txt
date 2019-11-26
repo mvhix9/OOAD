@@ -106,3 +106,40 @@ E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\uiNhanVien.QLBenhNhanUC.resources
 E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.TuyChonUC.resources
 E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.IndexUC.resources
 E:\IT\OOAD\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLBenhUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Demo.exe.config
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.exe
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Demo.exe
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Demo.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\BUS.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\DAO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\BUS.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\DAO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.TuyChonUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiBacSi.BacSiFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiBacSi.BacSiLapPhieuKhamUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiBacSi.LapDonThuocUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiBacSi.TraCuuBenhNhan.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.NhanVienLapPhieuKhamUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiNhanVien.QLBenhNhanUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLBenhUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QLNhanVienUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.IndexUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiNhanVien.NhanVienFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.MainFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.Properties.Resources.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.uiNhanVien.QLThuocUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.QuanTriVienFRM.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\uiQuanTriVien.XemBaoCaoUC.resources
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache

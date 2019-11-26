@@ -17,3 +17,12 @@ E:\IT\OOAD\OOAD\Project\Common\bin\Debug\DTO.dll
 E:\IT\OOAD\OOAD\Project\Common\bin\Debug\EntityFramework.dll
 E:\IT\OOAD\OOAD\Project\Common\bin\Debug\DTO.pdb
 E:\IT\OOAD\OOAD\Project\Common\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\obj\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\Common\obj\Debug\Common.pdb

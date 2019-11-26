@@ -106,7 +106,7 @@
             this.cbTenBenhNhan.FormattingEnabled = true;
             this.cbTenBenhNhan.Location = new System.Drawing.Point(127, 30);
             this.cbTenBenhNhan.Name = "cbTenBenhNhan";
-            this.cbTenBenhNhan.Size = new System.Drawing.Size(141, 28);
+            this.cbTenBenhNhan.Size = new System.Drawing.Size(185, 28);
             this.cbTenBenhNhan.TabIndex = 4;
             this.cbTenBenhNhan.ValueMember = "MaBenhNhan";
             // 
@@ -246,7 +246,7 @@
             this.cbTenBacSi.FormattingEnabled = true;
             this.cbTenBacSi.Location = new System.Drawing.Point(111, 30);
             this.cbTenBacSi.Name = "cbTenBacSi";
-            this.cbTenBacSi.Size = new System.Drawing.Size(141, 28);
+            this.cbTenBacSi.Size = new System.Drawing.Size(185, 28);
             this.cbTenBacSi.TabIndex = 16;
             this.cbTenBacSi.ValueMember = "MaNhanVien";
             // 

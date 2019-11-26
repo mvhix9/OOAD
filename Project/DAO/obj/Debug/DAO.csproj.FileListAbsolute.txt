@@ -39,3 +39,17 @@ E:\IT\OOAD\OOAD\Project\DAO\bin\Debug\Common.pdb
 E:\IT\OOAD\OOAD\Project\DAO\bin\Debug\DTO.pdb
 E:\IT\OOAD\OOAD\Project\DAO\bin\Debug\EntityFramework.xml
 E:\IT\OOAD\OOAD\Project\DAO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\DAO.dll.config
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\DAO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\DAO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\Common.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\Common.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\obj\Debug\DAO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DAO\obj\Debug\DAO.pdb

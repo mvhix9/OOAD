@@ -24,7 +24,7 @@ namespace Demo.uiNhanVien
 
         private void QLThuocUC_Load(object sender, EventArgs e)
         {
-            thuocBindingSource.DataSource = thuocServices.GetAll();
+            thuocBindingSource.DataSource = thuocServices.Find(t=>t.TrangThai == 1).ToList();;
         }
 
         private bool validInfo()
@@ -73,7 +73,7 @@ namespace Demo.uiNhanVien
                 t.DonVi = txtDonVi.Text;
                 t.DonGia = Double.Parse(txtDonGia.Text);
                 thuocServices.Insert(t);
-                thuocBindingSource.DataSource = thuocServices.GetAll();
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
                 MessageBox.Show("Thêm loại thuốc thành công");
             }
         }
@@ -88,7 +88,7 @@ namespace Demo.uiNhanVien
                 t.DonVi = txtDonVi.Text;
                 t.DonGia = Double.Parse(txtDonGia.Text);
                 thuocServices.Update(t);
-                thuocBindingSource.DataSource = thuocServices.GetAll();
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
                 MessageBox.Show("Sửa thông tin loại thuốc thành công");
             }
         }
@@ -101,7 +101,7 @@ namespace Demo.uiNhanVien
             {
                 Thuoc t = thuocBindingSource.Current as Thuoc;
                 thuocServices.Delete(t);
-                thuocBindingSource.DataSource = thuocServices.GetAll();
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
             }
         }
 
@@ -127,7 +127,7 @@ namespace Demo.uiNhanVien
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            var list = thuocServices.GetAll();
+            var list = thuocServices.Find(t=>t.TrangThai == 1).ToList();;
             if (!String.IsNullOrEmpty(txtTimKiem.Text))
             {
                 list = thuocServices.Find(t => t.TenThuoc.ToLower().Contains(txtTimKiem.Text.ToLower())).ToList();

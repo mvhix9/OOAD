@@ -23,7 +23,7 @@ namespace Demo.uiNhanVien
 
         private void QLBenhUC_Load(object sender, EventArgs e)
         {
-            benhBindingSource.DataSource = benhServices.GetAll();
+            benhBindingSource.DataSource = benhServices.Find(b=>b.TrangThai == 1).ToList();;
         }
 
         private void dtgvBenh_CurrentCellChanged(object sender, EventArgs e)
@@ -31,13 +31,13 @@ namespace Demo.uiNhanVien
             Benh benh = benhBindingSource.Current as Benh;
             if (benh != null)
             {
-                txtTenThuoc.Text = benh.TenBenh;
+                txtTenBenh.Text = benh.TenBenh;
             }
         }
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            var list = benhServices.GetAll();
+            var list = benhServices.Find(b=>b.TrangThai == 1).ToList();;
             //IEnumerable<Benh> list = null;
             if (!String.IsNullOrEmpty(txtTimKiem.Text))
             {
@@ -55,6 +55,57 @@ namespace Demo.uiNhanVien
             if (e.KeyCode == Keys.Enter)
             {
                 btnLoc_Click(sender, e);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if(benhBindingSource.Current == null)
+            {
+                MessageBox.Show("Vui lòng chọn loại bệnh");
+            }
+            else
+            {
+                Benh benh = benhBindingSource.Current as Benh;
+                benh.TrangThai = 0;
+                benhServices.Update(benh);
+                MessageBox.Show("Xóa thành công");
+                benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (benhBindingSource.Current == null)
+            {
+                MessageBox.Show("Vui lòng chọn loại bệnh");
+            }
+            else
+            {
+                Benh benh = new Benh();
+                benh.TrangThai = 1;
+                benh.TenBenh = txtTenBenh.Text;
+                benh.MaBenh = Int32.Parse(dtgvBenh.CurrentRow.Cells["MaBenh"].Value.ToString());
+                benhServices.Update(benh);
+                MessageBox.Show("Sửa thành công");
+                benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if(txtTenBenh.Text == null)
+            {
+                MessageBox.Show("Vui lòng nhập tên bệnh.");
+            }
+            else
+            {
+                Benh benh = new Benh();
+                benh.TenBenh = txtTenBenh.Text;
+                benh.TrangThai = 1;
+                benhServices.Insert(benh);
+                MessageBox.Show("Thêm bệnh thành công");
+                benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
             }
         }
     }

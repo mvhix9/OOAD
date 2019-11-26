@@ -38,15 +38,15 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbTenBenh = new System.Windows.Forms.Label();
-            this.txtTenThuoc = new System.Windows.Forms.TextBox();
+            this.txtTenBenh = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dtgvBenh = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.maBenhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenBenhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.benhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSua = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbBoLoc = new System.Windows.Forms.Label();
+            this.MaBenh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenBenhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBenh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benhBindingSource)).BeginInit();
@@ -94,11 +94,12 @@
             this.btnThem.TabIndex = 43;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lbTenBenh);
-            this.groupBox1.Controls.Add(this.txtTenThuoc);
+            this.groupBox1.Controls.Add(this.txtTenBenh);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
             this.groupBox1.Location = new System.Drawing.Point(20, 536);
@@ -114,20 +115,20 @@
             this.lbTenBenh.BackColor = System.Drawing.Color.Transparent;
             this.lbTenBenh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTenBenh.ForeColor = System.Drawing.Color.Black;
-            this.lbTenBenh.Location = new System.Drawing.Point(384, 56);
+            this.lbTenBenh.Location = new System.Drawing.Point(375, 90);
             this.lbTenBenh.Name = "lbTenBenh";
             this.lbTenBenh.Size = new System.Drawing.Size(69, 20);
             this.lbTenBenh.TabIndex = 28;
             this.lbTenBenh.Text = "Tên bệnh";
             // 
-            // txtTenThuoc
+            // txtTenBenh
             // 
-            this.txtTenThuoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenThuoc.Location = new System.Drawing.Point(463, 53);
-            this.txtTenThuoc.Multiline = true;
-            this.txtTenThuoc.Name = "txtTenThuoc";
-            this.txtTenThuoc.Size = new System.Drawing.Size(122, 60);
-            this.txtTenThuoc.TabIndex = 25;
+            this.txtTenBenh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenBenh.Location = new System.Drawing.Point(454, 87);
+            this.txtTenBenh.Multiline = true;
+            this.txtTenBenh.Name = "txtTenBenh";
+            this.txtTenBenh.Size = new System.Drawing.Size(122, 60);
+            this.txtTenBenh.TabIndex = 25;
             // 
             // btnXoa
             // 
@@ -142,6 +143,7 @@
             this.btnXoa.TabIndex = 45;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dtgvBenh
             // 
@@ -165,7 +167,7 @@
             this.dtgvBenh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvBenh.ColumnHeadersHeight = 40;
             this.dtgvBenh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maBenhDataGridViewTextBoxColumn,
+            this.MaBenh,
             this.tenBenhDataGridViewTextBoxColumn});
             this.dtgvBenh.DataSource = this.benhBindingSource;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -198,20 +200,6 @@
             this.dtgvBenh.TabIndex = 41;
             this.dtgvBenh.CurrentCellChanged += new System.EventHandler(this.dtgvBenh_CurrentCellChanged);
             // 
-            // maBenhDataGridViewTextBoxColumn
-            // 
-            this.maBenhDataGridViewTextBoxColumn.DataPropertyName = "MaBenh";
-            this.maBenhDataGridViewTextBoxColumn.HeaderText = "Mã bệnh";
-            this.maBenhDataGridViewTextBoxColumn.Name = "maBenhDataGridViewTextBoxColumn";
-            this.maBenhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenBenhDataGridViewTextBoxColumn
-            // 
-            this.tenBenhDataGridViewTextBoxColumn.DataPropertyName = "TenBenh";
-            this.tenBenhDataGridViewTextBoxColumn.HeaderText = "Tên bệnh";
-            this.tenBenhDataGridViewTextBoxColumn.Name = "tenBenhDataGridViewTextBoxColumn";
-            this.tenBenhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // benhBindingSource
             // 
             this.benhBindingSource.DataSource = typeof(DTO.Benh);
@@ -229,6 +217,7 @@
             this.btnSua.TabIndex = 44;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTimKiem
             // 
@@ -249,6 +238,20 @@
             this.lbBoLoc.Size = new System.Drawing.Size(52, 20);
             this.lbBoLoc.TabIndex = 39;
             this.lbBoLoc.Text = "Bộ lọc";
+            // 
+            // MaBenh
+            // 
+            this.MaBenh.DataPropertyName = "MaBenh";
+            this.MaBenh.HeaderText = "Mã bệnh";
+            this.MaBenh.Name = "MaBenh";
+            this.MaBenh.ReadOnly = true;
+            // 
+            // tenBenhDataGridViewTextBoxColumn
+            // 
+            this.tenBenhDataGridViewTextBoxColumn.DataPropertyName = "TenBenh";
+            this.tenBenhDataGridViewTextBoxColumn.HeaderText = "Tên bệnh";
+            this.tenBenhDataGridViewTextBoxColumn.Name = "tenBenhDataGridViewTextBoxColumn";
+            this.tenBenhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // QLBenhUC
             // 
@@ -284,14 +287,14 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbTenBenh;
-        private System.Windows.Forms.TextBox txtTenThuoc;
+        private System.Windows.Forms.TextBox txtTenBenh;
         private System.Windows.Forms.Button btnXoa;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvBenh;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lbBoLoc;
         private System.Windows.Forms.BindingSource benhBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maBenhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaBenh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenBenhDataGridViewTextBoxColumn;
     }
 }
