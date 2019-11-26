@@ -73,8 +73,8 @@ namespace Demo.uiNhanVien
                 t.DonVi = txtDonVi.Text;
                 t.DonGia = Double.Parse(txtDonGia.Text);
                 thuocServices.Insert(t);
-                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
                 MessageBox.Show("Thêm loại thuốc thành công");
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc => thuoc.TrangThai == 1).ToList();
             }
         }
 
@@ -88,8 +88,8 @@ namespace Demo.uiNhanVien
                 t.DonVi = txtDonVi.Text;
                 t.DonGia = Double.Parse(txtDonGia.Text);
                 thuocServices.Update(t);
-                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
                 MessageBox.Show("Sửa thông tin loại thuốc thành công");
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc => thuoc.TrangThai == 1).ToList();
             }
         }
 
@@ -100,8 +100,10 @@ namespace Demo.uiNhanVien
             if (MessageBox.Show("Xác nhận xóa loại thuốc ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Thuoc t = thuocBindingSource.Current as Thuoc;
-                thuocServices.Delete(t);
-                thuocBindingSource.DataSource = thuocServices.Find(thuoc=>thuoc.TrangThai == 1).ToList();;
+                t.TrangThai = 0;
+                thuocServices.Update(t);
+                MessageBox.Show("Xoá loại thuốc thành công");
+                thuocBindingSource.DataSource = thuocServices.Find(thuoc => thuoc.TrangThai == 1).ToList();
             }
         }
 

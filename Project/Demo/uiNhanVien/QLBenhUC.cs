@@ -108,5 +108,10 @@ namespace Demo.uiNhanVien
                 benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
             }
         }
+
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            txtTenBenh.Clear();
+        }
     }
 }

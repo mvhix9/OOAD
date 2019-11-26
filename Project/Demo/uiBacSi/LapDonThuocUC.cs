@@ -123,45 +123,53 @@ namespace uiBacSi
                 return;
             }
 
-            //Cập nhật trạng thái phiếu khám
-            int id = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
-            PhieuKham pk = phieuKhamServices.GetById(id);
-            pk.TrangThai = "Đã lập đơn thuốc";
-            phieuKhamServices.Update(pk);
-
-            //Tạo đơn thuốc mới
-            DonThuoc donthuoc = new DonThuoc();
-            donthuoc.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
-            donThuocServices.Insert(donthuoc);
-
-            //Tạo chi tiết đơn thuốc
-            double tongTien = 0;
-            foreach (DataGridViewRow row in dtgvChiTietDT.Rows)
+            if (dtgvChiTietDT.Rows.Count == 0)
             {
-                ChiTietDonThuoc ctdt = new ChiTietDonThuoc();
-                ctdt.MaDonThuoc = donthuoc.MaDonThuoc;
-                ctdt.MaThuoc = Int32.Parse(row.Cells["MaThuoc"].Value.ToString());
-                ctdt.SoLuong = Int32.Parse(row.Cells["SoLuong"].Value.ToString());
-                ctdt.ThanhTien = Double.Parse(row.Cells["ThanhTien"].Value.ToString());
-                ctdt.CachDung = row.Cells["CachDung"].Value.ToString();
-                chiTietDonThuocServices.Insert(ctdt);
-                tongTien += Int32.Parse(ctdt.ThanhTien.ToString());
-
-                //Cập nhật số lượng tồn cho thuốc
-                Thuoc t = thuocServices.GetById(ctdt.MaThuoc);
-                t.SoLuongTon -= ctdt.SoLuong;
-                thuocServices.Update(t);
+                MessageBox.Show("Vui lòng thêm thuốc trước khi lưu đơn thuốc");
+                return;
             }
+            else
+            {
+                //Cập nhật trạng thái phiếu khám
+                int id = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
+                PhieuKham pk = phieuKhamServices.GetById(id);
+                pk.TrangThai = "Đã lập đơn thuốc";
+                phieuKhamServices.Update(pk);
 
-            //Cập nhật tổng tiền cho đơn thuốc
-            donthuoc.TongTien = tongTien;
-            donThuocServices.Update(donthuoc);
+                //Tạo đơn thuốc mới
+                DonThuoc donthuoc = new DonThuoc();
+                donthuoc.MaPhieuKham = Int32.Parse(dtgvPhieuKham.CurrentRow.Cells[0].Value.ToString());
+                donThuocServices.Insert(donthuoc);
 
-            thuocBindingSource.DataSource = thuocServices.GetAll();
-            modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
-            dtgvChiTietDT.Rows.Clear();
-            dtgvChiTietDT.Refresh();
-            MessageBox.Show("Lập đơn thuốc thành công.");
+                //Tạo chi tiết đơn thuốc
+                double tongTien = 0;
+                foreach (DataGridViewRow row in dtgvChiTietDT.Rows)
+                {
+                    ChiTietDonThuoc ctdt = new ChiTietDonThuoc();
+                    ctdt.MaDonThuoc = donthuoc.MaDonThuoc;
+                    ctdt.MaThuoc = Int32.Parse(row.Cells["MaThuoc"].Value.ToString());
+                    ctdt.SoLuong = Int32.Parse(row.Cells["SoLuong"].Value.ToString());
+                    ctdt.ThanhTien = Double.Parse(row.Cells["ThanhTien"].Value.ToString());
+                    ctdt.CachDung = row.Cells["CachDung"].Value.ToString();
+                    chiTietDonThuocServices.Insert(ctdt);
+                    tongTien += Int32.Parse(ctdt.ThanhTien.ToString());
+
+                    //Cập nhật số lượng tồn cho thuốc
+                    Thuoc t = thuocServices.GetById(ctdt.MaThuoc);
+                    t.SoLuongTon -= ctdt.SoLuong;
+                    thuocServices.Update(t);
+                }
+
+                //Cập nhật tổng tiền cho đơn thuốc
+                donthuoc.TongTien = tongTien;
+                donThuocServices.Update(donthuoc);
+
+                thuocBindingSource.DataSource = thuocServices.GetAll();
+                modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
+                dtgvChiTietDT.Rows.Clear();
+                dtgvChiTietDT.Refresh();
+                MessageBox.Show("Lập đơn thuốc thành công");
+            }
         }
 
         private void dtgvPhieuKham_CurrentCellChanged(object sender, EventArgs e)
@@ -198,6 +206,7 @@ namespace uiBacSi
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
                     btnThem.Enabled = true;
                     btnXoa.Enabled = true;
+                    btnLuuDonThuoc.Enabled = true;
                 }
             }
         }
@@ -213,6 +222,7 @@ namespace uiBacSi
                     modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelHasDonThuocByIdDoctor(UserCache.Id);
                     btnThem.Enabled = false;
                     btnXoa.Enabled = false;
+                    btnLuuDonThuoc.Enabled = false;
                 }
             }
         }

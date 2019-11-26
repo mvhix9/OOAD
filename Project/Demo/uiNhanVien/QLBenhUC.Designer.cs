@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLoc = new System.Windows.Forms.Button();
             this.btnNhapLai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -41,12 +41,12 @@
             this.txtTenBenh = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dtgvBenh = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.MaBenh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenBenhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.benhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSua = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbBoLoc = new System.Windows.Forms.Label();
-            this.MaBenh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenBenhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBenh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benhBindingSource)).BeginInit();
@@ -80,6 +80,7 @@
             this.btnNhapLai.TabIndex = 46;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = false;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnThem
             // 
@@ -115,7 +116,7 @@
             this.lbTenBenh.BackColor = System.Drawing.Color.Transparent;
             this.lbTenBenh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTenBenh.ForeColor = System.Drawing.Color.Black;
-            this.lbTenBenh.Location = new System.Drawing.Point(375, 90);
+            this.lbTenBenh.Location = new System.Drawing.Point(384, 56);
             this.lbTenBenh.Name = "lbTenBenh";
             this.lbTenBenh.Size = new System.Drawing.Size(69, 20);
             this.lbTenBenh.TabIndex = 28;
@@ -124,7 +125,7 @@
             // txtTenBenh
             // 
             this.txtTenBenh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenBenh.Location = new System.Drawing.Point(454, 87);
+            this.txtTenBenh.Location = new System.Drawing.Point(463, 53);
             this.txtTenBenh.Multiline = true;
             this.txtTenBenh.Name = "txtTenBenh";
             this.txtTenBenh.Size = new System.Drawing.Size(122, 60);
@@ -149,35 +150,35 @@
             // 
             this.dtgvBenh.AllowUserToAddRows = false;
             this.dtgvBenh.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dtgvBenh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvBenh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvBenh.AutoGenerateColumns = false;
             this.dtgvBenh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBenh.BackgroundColor = System.Drawing.Color.White;
             this.dtgvBenh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvBenh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgvBenh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBenh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBenh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvBenh.ColumnHeadersHeight = 40;
             this.dtgvBenh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaBenh,
             this.tenBenhDataGridViewTextBoxColumn});
             this.dtgvBenh.DataSource = this.benhBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBenh.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBenh.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvBenh.DoubleBuffered = true;
             this.dtgvBenh.EnableHeadersVisualStyles = false;
             this.dtgvBenh.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -187,11 +188,11 @@
             this.dtgvBenh.ReadOnly = true;
             this.dtgvBenh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvBenh.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtgvBenh.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtgvBenh.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvBenh.RowTemplate.DividerHeight = 1;
             this.dtgvBenh.RowTemplate.Height = 30;
             this.dtgvBenh.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -199,6 +200,20 @@
             this.dtgvBenh.Size = new System.Drawing.Size(968, 445);
             this.dtgvBenh.TabIndex = 41;
             this.dtgvBenh.CurrentCellChanged += new System.EventHandler(this.dtgvBenh_CurrentCellChanged);
+            // 
+            // MaBenh
+            // 
+            this.MaBenh.DataPropertyName = "MaBenh";
+            this.MaBenh.HeaderText = "Mã bệnh";
+            this.MaBenh.Name = "MaBenh";
+            this.MaBenh.ReadOnly = true;
+            // 
+            // tenBenhDataGridViewTextBoxColumn
+            // 
+            this.tenBenhDataGridViewTextBoxColumn.DataPropertyName = "TenBenh";
+            this.tenBenhDataGridViewTextBoxColumn.HeaderText = "Tên bệnh";
+            this.tenBenhDataGridViewTextBoxColumn.Name = "tenBenhDataGridViewTextBoxColumn";
+            this.tenBenhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // benhBindingSource
             // 
@@ -238,20 +253,6 @@
             this.lbBoLoc.Size = new System.Drawing.Size(52, 20);
             this.lbBoLoc.TabIndex = 39;
             this.lbBoLoc.Text = "Bộ lọc";
-            // 
-            // MaBenh
-            // 
-            this.MaBenh.DataPropertyName = "MaBenh";
-            this.MaBenh.HeaderText = "Mã bệnh";
-            this.MaBenh.Name = "MaBenh";
-            this.MaBenh.ReadOnly = true;
-            // 
-            // tenBenhDataGridViewTextBoxColumn
-            // 
-            this.tenBenhDataGridViewTextBoxColumn.DataPropertyName = "TenBenh";
-            this.tenBenhDataGridViewTextBoxColumn.HeaderText = "Tên bệnh";
-            this.tenBenhDataGridViewTextBoxColumn.Name = "tenBenhDataGridViewTextBoxColumn";
-            this.tenBenhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // QLBenhUC
             // 
