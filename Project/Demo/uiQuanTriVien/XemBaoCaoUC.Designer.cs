@@ -53,6 +53,7 @@
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvBaoCaoDT = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.ngayKhamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.modelBaoCaoDoanhThuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelBaoCaoThuocBindingSource)).BeginInit();
@@ -266,6 +267,7 @@
             this.dtgvBaoCaoDT.ColumnHeadersHeight = 40;
             this.dtgvBaoCaoDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ngayKhamDataGridViewTextBoxColumn,
+            this.Column1,
             this.tongTienDataGridViewTextBoxColumn});
             this.dtgvBaoCaoDT.DataSource = this.modelBaoCaoDoanhThuBindingSource;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -303,6 +305,14 @@
             this.ngayKhamDataGridViewTextBoxColumn.HeaderText = "Ngày khám";
             this.ngayKhamDataGridViewTextBoxColumn.Name = "ngayKhamDataGridViewTextBoxColumn";
             this.ngayKhamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "STT";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // tongTienDataGridViewTextBoxColumn
             // 
@@ -357,6 +367,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvBaoCaoDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayKhamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
     }
 }
