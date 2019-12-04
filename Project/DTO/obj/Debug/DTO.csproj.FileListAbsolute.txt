@@ -1,0 +1,60 @@
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\DTO.dll.config
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\DTO.dll
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\DTO.pdb
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\EntityFramework.dll
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\EntityFramework.xml
+E:\IT\C#\Windows Forms\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\IT\C#\Windows Forms\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\IT\C#\Windows Forms\Project\DTO\obj\Debug\DTO.dll
+E:\IT\C#\Windows Forms\Project\DTO\obj\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\DTO.dll.config
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\obj\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\obj\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\DTO.dll.config
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\DTO.dll
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\DTO.pdb
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\EntityFramework.dll
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\EntityFramework.xml
+E:\IT\OOAD\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\IT\OOAD\OOAD\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\IT\OOAD\OOAD\Project\DTO\obj\Debug\DTO.dll
+E:\IT\OOAD\OOAD\Project\DTO\obj\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\DTO.dll.config
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\obj\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\obj\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Project\OOAD\mvhao\OOAD\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\DTO.dll.config
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\obj\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\Final\OOAD\Project\DTO\obj\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\DTO.dll.config
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\DTO.pdb
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.dll
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.dll
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.xml
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\bin\Debug\EntityFramework.SqlServer.xml
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\obj\Debug\DTO.dll
+E:\Baitap\HK5\PTTK OOP\backup_newest\Final\OOAD\Project\DTO\obj\Debug\DTO.pdb
