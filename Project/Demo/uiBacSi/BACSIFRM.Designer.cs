@@ -33,8 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BacSiFRM));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.topPanel = new System.Windows.Forms.Panel();
-            this.btnRestore = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblFormTitle = new System.Windows.Forms.Label();
@@ -45,19 +43,13 @@
             this.btnLapPhieuKham = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTuyChon = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnIndex = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblRole = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
-            this.lblRoleInput = new System.Windows.Forms.Label();
             this.lblNameInput = new System.Windows.Forms.Label();
             this.iconPicture = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.menuPanel.SuspendLayout();
@@ -72,8 +64,6 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
-            this.topPanel.Controls.Add(this.btnRestore);
-            this.topPanel.Controls.Add(this.btnMaximize);
             this.topPanel.Controls.Add(this.btnMinimize);
             this.topPanel.Controls.Add(this.btnClose);
             this.topPanel.Controls.Add(this.lblFormTitle);
@@ -84,39 +74,6 @@
             this.topPanel.Size = new System.Drawing.Size(1247, 54);
             this.topPanel.TabIndex = 1;
             // 
-            // btnRestore
-            // 
-            this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestore.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.btnRestore, BunifuAnimatorNS.DecorationType.None);
-            this.btnRestore.Image = ((System.Drawing.Image)(resources.GetObject("btnRestore.Image")));
-            this.btnRestore.ImageActive = null;
-            this.btnRestore.Location = new System.Drawing.Point(1168, 12);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(30, 30);
-            this.btnRestore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRestore.TabIndex = 5;
-            this.btnRestore.TabStop = false;
-            this.btnRestore.Visible = false;
-            this.btnRestore.Zoom = 10;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.btnMaximize, BunifuAnimatorNS.DecorationType.None);
-            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.ImageActive = null;
-            this.btnMaximize.Location = new System.Drawing.Point(1168, 12);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(30, 30);
-            this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMaximize.TabIndex = 4;
-            this.btnMaximize.TabStop = false;
-            this.btnMaximize.Zoom = 10;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -124,7 +81,7 @@
             this.bunifuTransition1.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1132, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1168, 12);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(30, 30);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,13 +134,10 @@
             this.menuPanel.Controls.Add(this.btnLapPhieuKham);
             this.menuPanel.Controls.Add(this.btnTuyChon);
             this.menuPanel.Controls.Add(this.btnIndex);
-            this.menuPanel.Controls.Add(this.lblRole);
             this.menuPanel.Controls.Add(lblName);
-            this.menuPanel.Controls.Add(this.lblRoleInput);
             this.menuPanel.Controls.Add(this.lblNameInput);
             this.menuPanel.Controls.Add(this.iconPicture);
             this.menuPanel.Controls.Add(this.btnLogout);
-            this.menuPanel.Controls.Add(this.shapeContainer2);
             this.bunifuTransition1.SetDecoration(this.menuPanel, BunifuAnimatorNS.DecorationType.None);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuPanel.Location = new System.Drawing.Point(0, 54);
@@ -195,7 +149,7 @@
             // 
             this.activePanel.BackColor = System.Drawing.Color.White;
             this.bunifuTransition1.SetDecoration(this.activePanel, BunifuAnimatorNS.DecorationType.None);
-            this.activePanel.Location = new System.Drawing.Point(0, 224);
+            this.activePanel.Location = new System.Drawing.Point(0, 207);
             this.activePanel.Name = "activePanel";
             this.activePanel.Size = new System.Drawing.Size(10, 81);
             this.activePanel.TabIndex = 0;
@@ -203,6 +157,7 @@
             // btnLapDonThuoc
             // 
             this.btnLapDonThuoc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnLapDonThuoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLapDonThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLapDonThuoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLapDonThuoc.BorderRadius = 0;
@@ -223,7 +178,7 @@
             this.btnLapDonThuoc.IconVisible = true;
             this.btnLapDonThuoc.IconZoom = 90D;
             this.btnLapDonThuoc.IsTab = true;
-            this.btnLapDonThuoc.Location = new System.Drawing.Point(0, 380);
+            this.btnLapDonThuoc.Location = new System.Drawing.Point(0, 363);
             this.btnLapDonThuoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLapDonThuoc.Name = "btnLapDonThuoc";
             this.btnLapDonThuoc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -242,6 +197,7 @@
             // btnLapPhieuKham
             // 
             this.btnLapPhieuKham.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnLapPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLapPhieuKham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLapPhieuKham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLapPhieuKham.BorderRadius = 0;
@@ -262,7 +218,7 @@
             this.btnLapPhieuKham.IconVisible = true;
             this.btnLapPhieuKham.IconZoom = 90D;
             this.btnLapPhieuKham.IsTab = true;
-            this.btnLapPhieuKham.Location = new System.Drawing.Point(0, 302);
+            this.btnLapPhieuKham.Location = new System.Drawing.Point(0, 285);
             this.btnLapPhieuKham.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLapPhieuKham.Name = "btnLapPhieuKham";
             this.btnLapPhieuKham.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -281,6 +237,7 @@
             // btnTuyChon
             // 
             this.btnTuyChon.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnTuyChon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTuyChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnTuyChon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTuyChon.BorderRadius = 0;
@@ -301,7 +258,7 @@
             this.btnTuyChon.IconVisible = true;
             this.btnTuyChon.IconZoom = 90D;
             this.btnTuyChon.IsTab = true;
-            this.btnTuyChon.Location = new System.Drawing.Point(0, 458);
+            this.btnTuyChon.Location = new System.Drawing.Point(0, 441);
             this.btnTuyChon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTuyChon.Name = "btnTuyChon";
             this.btnTuyChon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -320,6 +277,7 @@
             // btnIndex
             // 
             this.btnIndex.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(177)))));
+            this.btnIndex.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIndex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnIndex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIndex.BorderRadius = 0;
@@ -340,7 +298,7 @@
             this.btnIndex.IconVisible = true;
             this.btnIndex.IconZoom = 90D;
             this.btnIndex.IsTab = true;
-            this.btnIndex.Location = new System.Drawing.Point(0, 224);
+            this.btnIndex.Location = new System.Drawing.Point(0, 207);
             this.btnIndex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIndex.Name = "btnIndex";
             this.btnIndex.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -356,42 +314,21 @@
             this.btnIndex.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnIndex.Click += new System.EventHandler(this.btnIndex_Click);
             // 
-            // lblRole
-            // 
-            this.bunifuTransition1.SetDecoration(this.lblRole, BunifuAnimatorNS.DecorationType.None);
-            this.lblRole.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblRole.Location = new System.Drawing.Point(105, 178);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(84, 20);
-            this.lblRole.TabIndex = 11;
-            this.lblRole.Text = "Tên vai trò";
-            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblName
             // 
             lblName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(lblName, BunifuAnimatorNS.DecorationType.None);
             lblName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            lblName.Location = new System.Drawing.Point(78, 146);
+            lblName.Location = new System.Drawing.Point(82, 146);
             lblName.Name = "lblName";
             lblName.Size = new System.Drawing.Size(76, 20);
             lblName.TabIndex = 10;
             lblName.Text = "Họ và tên";
             lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblRoleInput
-            // 
-            this.bunifuTransition1.SetDecoration(this.lblRoleInput, BunifuAnimatorNS.DecorationType.None);
-            this.lblRoleInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblRoleInput.Location = new System.Drawing.Point(49, 178);
-            this.lblRoleInput.Name = "lblRoleInput";
-            this.lblRoleInput.Size = new System.Drawing.Size(59, 20);
-            this.lblRoleInput.TabIndex = 5;
-            this.lblRoleInput.Text = "Vai trò :";
-            this.lblRoleInput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblNameInput
             // 
+            this.lblNameInput.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.lblNameInput, BunifuAnimatorNS.DecorationType.None);
             this.lblNameInput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblNameInput.Location = new System.Drawing.Point(86, 117);
@@ -431,27 +368,6 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // shapeContainer2
-            // 
-            this.bunifuTransition1.SetDecoration(this.shapeContainer2, BunifuAnimatorNS.DecorationType.None);
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(240, 823);
-            this.shapeContainer2.TabIndex = 7;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.White;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 23;
-            this.lineShape1.X2 = 217;
-            this.lineShape1.Y1 = 210;
-            this.lineShape1.Y2 = 210;
-            // 
             // contentPanel
             // 
             this.bunifuTransition1.SetDecoration(this.contentPanel, BunifuAnimatorNS.DecorationType.None);
@@ -484,8 +400,8 @@
             // 
             // BacSiFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1247, 877);
             this.Controls.Add(this.contentPanel);
@@ -497,11 +413,10 @@
             this.Name = "BacSiFRM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BacSiFRM_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.menuPanel.ResumeLayout(false);
@@ -518,18 +433,12 @@
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private System.Windows.Forms.Label lblFormTitle;
-        private Bunifu.Framework.UI.BunifuImageButton btnRestore;
-        private Bunifu.Framework.UI.BunifuImageButton btnMaximize;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.PictureBox iconPicture;
         private System.Windows.Forms.Label lblNameInput;
-        private System.Windows.Forms.Label lblRoleInput;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.Label lblRole;
         private Bunifu.Framework.UI.BunifuFlatButton btnIndex;
         private System.Windows.Forms.Panel activePanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnTuyChon;

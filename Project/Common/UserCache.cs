@@ -14,11 +14,6 @@ namespace Common
             get; set;
         }
 
-        public static string Role
-        {
-            get; set;
-        }
-
         public static int RoleId
         {
             get; set;

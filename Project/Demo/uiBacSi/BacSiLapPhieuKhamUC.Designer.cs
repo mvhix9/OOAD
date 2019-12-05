@@ -79,6 +79,7 @@
             // 
             // radPKDaLap
             // 
+            this.radPKDaLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radPKDaLap.AutoSize = true;
             this.radPKDaLap.BackColor = System.Drawing.Color.Transparent;
             this.radPKDaLap.Checked = true;
@@ -95,6 +96,7 @@
             // 
             // radPKHoanThanh
             // 
+            this.radPKHoanThanh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radPKHoanThanh.AutoSize = true;
             this.radPKHoanThanh.BackColor = System.Drawing.Color.Transparent;
             this.radPKHoanThanh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -109,6 +111,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblTrieuChung);
             this.groupBox1.Controls.Add(this.txtTrieuChung);
@@ -144,6 +147,7 @@
             // 
             // btnTraCuu
             // 
+            this.btnTraCuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTraCuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnTraCuu.FlatAppearance.BorderSize = 0;
             this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,6 +163,7 @@
             // 
             // btnLuuPhieuKham
             // 
+            this.btnLuuPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuuPhieuKham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLuuPhieuKham.FlatAppearance.BorderSize = 0;
             this.btnLuuPhieuKham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -217,6 +222,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dtgvChiTietBenh);
             this.groupBox2.Controls.Add(this.lblDSLB);
@@ -315,6 +321,7 @@
             this.dtgvPhieuKham.AllowUserToOrderColumns = true;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.dtgvPhieuKham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvPhieuKham.AutoGenerateColumns = false;
             this.dtgvPhieuKham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvPhieuKham.BackgroundColor = System.Drawing.Color.White;
@@ -414,8 +421,8 @@
             // 
             // BacSiLapPhieuKhamUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.dtgvPhieuKham);
             this.Controls.Add(this.groupBox2);

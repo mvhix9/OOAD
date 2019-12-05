@@ -30,6 +30,7 @@ namespace Demo.uiNhanVien
 
         private void LapPhieuKhamUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             benhNhanBindingSource.DataSource = benhNhanServices.Find(bn => bn.TrangThai==1).ToList();
             nhanVienBindingSource.DataSource = nhanVienServices.GetDoctor;
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModel();

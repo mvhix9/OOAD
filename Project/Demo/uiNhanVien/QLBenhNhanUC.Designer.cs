@@ -31,10 +31,10 @@ namespace uiNhanVien
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNgaySinhBN = new System.Windows.Forms.Label();
@@ -54,7 +54,6 @@ namespace uiNhanVien
             this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.benhNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbBoLoc = new System.Windows.Forms.Label();
             this.btnNhapLai = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@ namespace uiNhanVien
             // 
             // btnThem
             // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,6 +81,7 @@ namespace uiNhanVien
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.lblNgaySinhBN);
             this.groupBox1.Controls.Add(this.lblGioiTinhBN);
             this.groupBox1.Controls.Add(this.lblHoTenBN);
@@ -187,6 +188,7 @@ namespace uiNhanVien
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -202,6 +204,7 @@ namespace uiNhanVien
             // 
             // btnSua
             // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,22 +222,23 @@ namespace uiNhanVien
             // 
             this.dtgvBenhNhan.AllowUserToAddRows = false;
             this.dtgvBenhNhan.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvBenhNhan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dtgvBenhNhan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dtgvBenhNhan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvBenhNhan.AutoGenerateColumns = false;
             this.dtgvBenhNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBenhNhan.BackgroundColor = System.Drawing.Color.White;
             this.dtgvBenhNhan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvBenhNhan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgvBenhNhan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBenhNhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBenhNhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgvBenhNhan.ColumnHeadersHeight = 40;
             this.dtgvBenhNhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maBenhNhanDataGridViewTextBoxColumn,
@@ -243,14 +247,14 @@ namespace uiNhanVien
             this.ngaySinhDataGridViewTextBoxColumn,
             this.diaChiDataGridViewTextBoxColumn});
             this.dtgvBenhNhan.DataSource = this.benhNhanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBenhNhan.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBenhNhan.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtgvBenhNhan.DoubleBuffered = true;
             this.dtgvBenhNhan.EnableHeadersVisualStyles = false;
             this.dtgvBenhNhan.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -260,11 +264,11 @@ namespace uiNhanVien
             this.dtgvBenhNhan.ReadOnly = true;
             this.dtgvBenhNhan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvBenhNhan.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtgvBenhNhan.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtgvBenhNhan.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgvBenhNhan.RowTemplate.DividerHeight = 1;
             this.dtgvBenhNhan.RowTemplate.Height = 30;
             this.dtgvBenhNhan.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -312,13 +316,9 @@ namespace uiNhanVien
             // 
             this.benhNhanBindingSource.DataSource = typeof(DTO.BenhNhan);
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 7;
-            this.bunifuElipse1.TargetControl = this.dtgvBenhNhan;
-            // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.Location = new System.Drawing.Point(70, 18);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -328,6 +328,7 @@ namespace uiNhanVien
             // 
             // lbBoLoc
             // 
+            this.lbBoLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbBoLoc.AutoSize = true;
             this.lbBoLoc.BackColor = System.Drawing.Color.Transparent;
             this.lbBoLoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -340,6 +341,7 @@ namespace uiNhanVien
             // 
             // btnNhapLai
             // 
+            this.btnNhapLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNhapLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnNhapLai.FlatAppearance.BorderSize = 0;
             this.btnNhapLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -355,6 +357,7 @@ namespace uiNhanVien
             // 
             // btnLoc
             // 
+            this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLoc.FlatAppearance.BorderSize = 0;
             this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,8 +373,8 @@ namespace uiNhanVien
             // 
             // QLBenhNhanUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.btnNhapLai);
@@ -409,7 +412,6 @@ namespace uiNhanVien
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.BindingSource benhNhanBindingSource;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvBenhNhan;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lbBoLoc;
         private System.Windows.Forms.Button btnNhapLai;

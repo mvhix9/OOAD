@@ -67,6 +67,7 @@
             // 
             // dtpStart
             // 
+            this.dtpStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpStart.CustomFormat = "dd-MM-yyyy";
             this.dtpStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -77,6 +78,7 @@
             // 
             // dtpEnd
             // 
+            this.dtpEnd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpEnd.CustomFormat = "dd-MM-yyyy";
             this.dtpEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -87,6 +89,7 @@
             // 
             // cbBaoCao
             // 
+            this.cbBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbBaoCao.FormattingEnabled = true;
             this.cbBaoCao.Items.AddRange(new object[] {
@@ -100,6 +103,7 @@
             // 
             // btnXemBaoCao
             // 
+            this.btnXemBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXemBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnXemBaoCao.FlatAppearance.BorderSize = 0;
             this.btnXemBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,6 +119,7 @@
             // 
             // lbTongDoanhThu
             // 
+            this.lbTongDoanhThu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTongDoanhThu.AutoSize = true;
             this.lbTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTongDoanhThu.ForeColor = System.Drawing.Color.Black;
@@ -131,6 +136,7 @@
             // 
             // txtTongDoanhThu
             // 
+            this.txtTongDoanhThu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTongDoanhThu.Enabled = false;
             this.txtTongDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTongDoanhThu.Location = new System.Drawing.Point(845, 692);
@@ -142,6 +148,7 @@
             // 
             // lblLoaiBaoCao
             // 
+            this.lblLoaiBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLoaiBaoCao.AutoSize = true;
             this.lblLoaiBaoCao.BackColor = System.Drawing.Color.Transparent;
             this.lblLoaiBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -154,6 +161,7 @@
             // 
             // lblStartDate
             // 
+            this.lblStartDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.BackColor = System.Drawing.Color.Transparent;
             this.lblStartDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -166,6 +174,7 @@
             // 
             // lblEndDate
             // 
+            this.lblEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.BackColor = System.Drawing.Color.Transparent;
             this.lblEndDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -182,6 +191,7 @@
             this.dtgvBaoCaoSLT.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvBaoCaoSLT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvBaoCaoSLT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvBaoCaoSLT.AutoGenerateColumns = false;
             this.dtgvBaoCaoSLT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBaoCaoSLT.BackgroundColor = System.Drawing.Color.White;
@@ -250,6 +260,7 @@
             this.dtgvBaoCaoDT.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.dtgvBaoCaoDT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvBaoCaoDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvBaoCaoDT.AutoGenerateColumns = false;
             this.dtgvBaoCaoDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBaoCaoDT.BackgroundColor = System.Drawing.Color.White;
@@ -323,8 +334,8 @@
             // 
             // XemBaoCaoUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);

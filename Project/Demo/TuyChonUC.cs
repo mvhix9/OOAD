@@ -28,6 +28,7 @@ namespace Demo
 
         private void TuyChonUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             getInfo();
         }
 
@@ -128,17 +129,20 @@ namespace Demo
                         case 1:
                             NhanVienFRM.lblName.Text = UserCache.Name;
                             int leftNVFRM = (NhanVienFRM.lblName.Parent.Width - NhanVienFRM.lblName.Width) / 2;
-                            BacSiFRM.centerLocation(NhanVienFRM.lblName, leftNVFRM, 146);
+                            //NhanVienFRM.centerLocation(NhanVienFRM.lblName, leftNVFRM, 146);
+                            NhanVienFRM.lblName.Left = leftNVFRM;
                             break;
                         case 2:
                             BacSiFRM.lblName.Text = UserCache.Name;
                             int leftBSFRM = (BacSiFRM.lblName.Parent.Width - BacSiFRM.lblName.Width) / 2;
-                            BacSiFRM.centerLocation(BacSiFRM.lblName, leftBSFRM, 146);
+                            //BacSiFRM.centerLocation(BacSiFRM.lblName, leftBSFRM, 146);
+                            BacSiFRM.lblName.Left = leftBSFRM;
                             break;
                         case 3:
                             QuanTriVienFRM.lblName.Text = UserCache.Name;
                             int leftQTVFRM = (QuanTriVienFRM.lblName.Parent.Width - QuanTriVienFRM.lblName.Width) / 2;
-                            QuanTriVienFRM.centerLocation(QuanTriVienFRM.lblName, leftQTVFRM, 146);
+                            //QuanTriVienFRM.centerLocation(QuanTriVienFRM.lblName, leftQTVFRM, 146);
+                            QuanTriVienFRM.lblName.Left = leftQTVFRM;
                             break;
                     }
                 }

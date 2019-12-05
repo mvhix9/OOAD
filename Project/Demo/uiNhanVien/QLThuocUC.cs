@@ -24,6 +24,7 @@ namespace Demo.uiNhanVien
 
         private void QLThuocUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             thuocBindingSource.DataSource = thuocServices.Find(t=>t.TrangThai == 1).ToList();;
         }
 

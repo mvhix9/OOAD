@@ -64,6 +64,7 @@
             // 
             // lbBoLoc
             // 
+            this.lbBoLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbBoLoc.AutoSize = true;
             this.lbBoLoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbBoLoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
@@ -75,6 +76,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.Location = new System.Drawing.Point(76, 21);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -93,6 +95,7 @@
             this.dtgvThuoc.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvThuoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvThuoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvThuoc.AutoGenerateColumns = false;
             this.dtgvThuoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvThuoc.BackgroundColor = System.Drawing.Color.White;
@@ -186,6 +189,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.lblDonVi);
             this.groupBox1.Controls.Add(this.lblSoLuongTon);
             this.groupBox1.Controls.Add(this.txtDonGia);
@@ -285,6 +289,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -300,6 +305,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,6 +321,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -330,6 +337,7 @@
             // 
             // btnNhapLai
             // 
+            this.btnNhapLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNhapLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnNhapLai.FlatAppearance.BorderSize = 0;
             this.btnNhapLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -345,6 +353,7 @@
             // 
             // btnLoc
             // 
+            this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLoc.FlatAppearance.BorderSize = 0;
             this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -360,8 +369,8 @@
             // 
             // QLThuocUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.btnNhapLai);

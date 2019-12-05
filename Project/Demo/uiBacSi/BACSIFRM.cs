@@ -23,8 +23,8 @@ namespace uiBacSi
         {
             lblName.Text = UserCache.Name;
             int left = (lblName.Parent.Width - lblName.Width) / 2;
-            centerLocation(lblName, left, 146);
-            lblRole.Text = UserCache.Role;
+            //centerLocation(lblName, left, 146);
+            lblName.Left = left;
             btnIndex.selected = true;
             btnIndex_Click(sender, e);
         }
@@ -37,20 +37,6 @@ namespace uiBacSi
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btnMaximize.Visible = false;
-            btnRestore.Visible = true;
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            btnMaximize.Visible = true;
-            btnRestore.Visible = false;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace uiBacSi
         DonThuocServices donThuocServices = new DonThuocServices(new UnitOfWork(new QuanLyPhongMachEntities()));
         private void LapDonThuocUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelCompletedByIdDoctor(UserCache.Id);
             thuocBindingSource.DataSource = thuocServices.Find(t => t.TrangThai.Equals(1)).ToList();
         }

@@ -44,9 +44,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.loginPicture = new System.Windows.Forms.PictureBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShapePassword = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShapeUsername = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -131,7 +128,6 @@
             this.contentPanel.Controls.Add(this.txtPassword);
             this.contentPanel.Controls.Add(this.txtUsername);
             this.contentPanel.Controls.Add(this.loginPicture);
-            this.contentPanel.Controls.Add(this.shapeContainer1);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.contentPanel.Location = new System.Drawing.Point(0, 54);
@@ -141,14 +137,13 @@
             // 
             // lblError
             // 
-            this.lblError.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Image = ((System.Drawing.Image)(resources.GetObject("lblError.Image")));
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(344, 145);
+            this.lblError.Location = new System.Drawing.Point(344, 175);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(57, 20);
             this.lblError.TabIndex = 0;
@@ -157,12 +152,11 @@
             // 
             // passwordPicture
             // 
-            this.passwordPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.passwordPicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.passwordPicture.BackColor = System.Drawing.Color.Transparent;
             this.passwordPicture.Image = ((System.Drawing.Image)(resources.GetObject("passwordPicture.Image")));
             this.passwordPicture.ImageActive = null;
-            this.passwordPicture.Location = new System.Drawing.Point(223, 204);
+            this.passwordPicture.Location = new System.Drawing.Point(249, 242);
             this.passwordPicture.Name = "passwordPicture";
             this.passwordPicture.Size = new System.Drawing.Size(25, 25);
             this.passwordPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -172,12 +166,11 @@
             // 
             // usernamePicture
             // 
-            this.usernamePicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.usernamePicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.usernamePicture.BackColor = System.Drawing.Color.Transparent;
             this.usernamePicture.Image = ((System.Drawing.Image)(resources.GetObject("usernamePicture.Image")));
             this.usernamePicture.ImageActive = null;
-            this.usernamePicture.Location = new System.Drawing.Point(223, 169);
+            this.usernamePicture.Location = new System.Drawing.Point(249, 207);
             this.usernamePicture.Name = "usernamePicture";
             this.usernamePicture.Size = new System.Drawing.Size(25, 25);
             this.usernamePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,16 +180,15 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(271, 257);
+            this.btnLogin.Location = new System.Drawing.Point(247, 287);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(202, 46);
+            this.btnLogin.Size = new System.Drawing.Size(250, 46);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.TabStop = false;
             this.btnLogin.Text = "ĐĂNG NHẬP";
@@ -205,15 +197,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
-            this.txtPassword.Location = new System.Drawing.Point(254, 209);
+            this.txtPassword.Location = new System.Drawing.Point(280, 242);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(241, 20);
+            this.txtPassword.Size = new System.Drawing.Size(216, 27);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "MẬT KHẨU";
@@ -223,15 +214,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
-            this.txtUsername.Location = new System.Drawing.Point(254, 174);
+            this.txtUsername.Location = new System.Drawing.Point(280, 207);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(241, 20);
+            this.txtUsername.Size = new System.Drawing.Size(216, 27);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TabStop = false;
             this.txtUsername.Text = "TÊN ĐĂNG NHẬP";
@@ -241,49 +231,14 @@
             // 
             // loginPicture
             // 
+            this.loginPicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.loginPicture.Image = ((System.Drawing.Image)(resources.GetObject("loginPicture.Image")));
-            this.loginPicture.Location = new System.Drawing.Point(312, 23);
+            this.loginPicture.Location = new System.Drawing.Point(312, 53);
             this.loginPicture.Name = "loginPicture";
             this.loginPicture.Size = new System.Drawing.Size(120, 120);
             this.loginPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.loginPicture.TabIndex = 0;
             this.loginPicture.TabStop = false;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShapePassword,
-            this.lineShapeUsername});
-            this.shapeContainer1.Size = new System.Drawing.Size(744, 387);
-            this.shapeContainer1.TabIndex = 4;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShapePassword
-            // 
-            this.lineShapePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineShapePassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
-            this.lineShapePassword.Name = "lineShapePassword";
-            this.lineShapePassword.X1 = 222;
-            this.lineShapePassword.X2 = 494;
-            this.lineShapePassword.Y1 = 233;
-            this.lineShapePassword.Y2 = 233;
-            // 
-            // lineShapeUsername
-            // 
-            this.lineShapeUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineShapeUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
-            this.lineShapeUsername.Name = "lineShapeUsername";
-            this.lineShapeUsername.X1 = 222;
-            this.lineShapeUsername.X2 = 494;
-            this.lineShapeUsername.Y1 = 197;
-            this.lineShapeUsername.Y2 = 197;
             // 
             // MainFRM
             // 
@@ -299,6 +254,7 @@
             this.Name = "MainFRM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFRM";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
@@ -321,15 +277,12 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private System.Windows.Forms.Panel contentPanel;
-        private System.Windows.Forms.PictureBox loginPicture;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShapeUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShapePassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnLogin;
-        private Bunifu.Framework.UI.BunifuImageButton usernamePicture;
-        private Bunifu.Framework.UI.BunifuImageButton passwordPicture;
         private System.Windows.Forms.Label lblError;
+        private Bunifu.Framework.UI.BunifuImageButton passwordPicture;
+        private Bunifu.Framework.UI.BunifuImageButton usernamePicture;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.PictureBox loginPicture;
     }
 }

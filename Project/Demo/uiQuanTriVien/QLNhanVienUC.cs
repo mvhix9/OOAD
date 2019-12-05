@@ -27,6 +27,7 @@ namespace uiQuanTriVien
 
         private void QLNhanVienUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             nhanVienBindingSource.DataSource = nhanVienServices.Find(nv => nv.MaNhanVien != UserCache.Id && nv.TrangThai == 1).ToList();
             vaiTroBindingSource.DataSource = vaiTroServices.GetAll();
         }
@@ -141,6 +142,28 @@ namespace uiQuanTriVien
                 nhanVienServices.Update(nv);
                 MessageBox.Show("Sửa thông tin nhân viên thành công");
                 nhanVienBindingSource.DataSource = nhanVienServices.Find(n => n.MaNhanVien != UserCache.Id && n.TrangThai == 1).ToList();
+            }
+        }
+
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            var list = nhanVienServices.Find(nv => nv.TrangThai == 1 && nv.MaNhanVien != UserCache.Id).ToList();
+            if (!String.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                list = nhanVienServices.Find(nv => nv.HoTen.ToLower().Contains(txtTimKiem.Text.ToLower()) && nv.MaNhanVien != UserCache.Id).ToList();
+                if (list == null)
+                {
+                    list = null;
+                }
+            }
+            nhanVienBindingSource.DataSource = list;
+        }
+
+        private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLoc_Click(sender, e);
             }
         }
     }

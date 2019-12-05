@@ -23,6 +23,7 @@ namespace Demo.uiNhanVien
 
         private void QLBenhUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             benhBindingSource.DataSource = benhServices.Find(b=>b.TrangThai == 1).ToList();;
         }
 

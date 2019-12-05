@@ -56,6 +56,7 @@
             // 
             // grpBoxTTNV
             // 
+            this.grpBoxTTNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpBoxTTNV.Controls.Add(this.btnNhapLaiTTNV);
             this.grpBoxTTNV.Controls.Add(this.btnDoiTTNV);
             this.grpBoxTTNV.Controls.Add(this.dpNgaySinh);
@@ -79,6 +80,7 @@
             // 
             // btnNhapLaiTTNV
             // 
+            this.btnNhapLaiTTNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNhapLaiTTNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnNhapLaiTTNV.FlatAppearance.BorderSize = 0;
             this.btnNhapLaiTTNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,6 +96,7 @@
             // 
             // btnDoiTTNV
             // 
+            this.btnDoiTTNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDoiTTNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnDoiTTNV.FlatAppearance.BorderSize = 0;
             this.btnDoiTTNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,6 +112,7 @@
             // 
             // dpNgaySinh
             // 
+            this.dpNgaySinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dpNgaySinh.CustomFormat = "MM-dd-yyyy";
             this.dpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -119,6 +123,7 @@
             // 
             // cbGioiTinh
             // 
+            this.cbGioiTinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbGioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
@@ -131,6 +136,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDiaChi.Location = new System.Drawing.Point(428, 194);
             this.txtDiaChi.Multiline = true;
@@ -140,6 +146,7 @@
             // 
             // lblDiaChi
             // 
+            this.lblDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -152,6 +159,7 @@
             // 
             // lblNgaySinh
             // 
+            this.lblNgaySinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNgaySinh.AutoSize = true;
             this.lblNgaySinh.BackColor = System.Drawing.Color.Transparent;
             this.lblNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -164,6 +172,7 @@
             // 
             // lblGioiTinh
             // 
+            this.lblGioiTinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblGioiTinh.AutoSize = true;
             this.lblGioiTinh.BackColor = System.Drawing.Color.Transparent;
             this.lblGioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -176,6 +185,7 @@
             // 
             // txtHoTen
             // 
+            this.txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtHoTen.Location = new System.Drawing.Point(428, 64);
             this.txtHoTen.Name = "txtHoTen";
@@ -184,6 +194,7 @@
             // 
             // lblHoTen
             // 
+            this.lblHoTen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.BackColor = System.Drawing.Color.Transparent;
             this.lblHoTen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -196,6 +207,7 @@
             // 
             // txtTenDangNhap
             // 
+            this.txtTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(428, 22);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
@@ -204,6 +216,7 @@
             // 
             // lblTenDangNhap
             // 
+            this.lblTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTenDangNhap.AutoSize = true;
             this.lblTenDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lblTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -216,6 +229,7 @@
             // 
             // grpBoxTTMK
             // 
+            this.grpBoxTTMK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpBoxTTMK.Controls.Add(this.btnNhapLaiMKNV);
             this.grpBoxTTMK.Controls.Add(this.btnDoiMKNV);
             this.grpBoxTTMK.Controls.Add(this.txtNhapLaiMKMoi);
@@ -235,6 +249,7 @@
             // 
             // btnNhapLaiMKNV
             // 
+            this.btnNhapLaiMKNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNhapLaiMKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnNhapLaiMKNV.FlatAppearance.BorderSize = 0;
             this.btnNhapLaiMKNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -250,6 +265,7 @@
             // 
             // btnDoiMKNV
             // 
+            this.btnDoiMKNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDoiMKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnDoiMKNV.FlatAppearance.BorderSize = 0;
             this.btnDoiMKNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -265,6 +281,7 @@
             // 
             // txtNhapLaiMKMoi
             // 
+            this.txtNhapLaiMKMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNhapLaiMKMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNhapLaiMKMoi.Location = new System.Drawing.Point(428, 127);
             this.txtNhapLaiMKMoi.Name = "txtNhapLaiMKMoi";
@@ -274,6 +291,7 @@
             // 
             // lblNhapLaiMKMoi
             // 
+            this.lblNhapLaiMKMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNhapLaiMKMoi.AutoSize = true;
             this.lblNhapLaiMKMoi.BackColor = System.Drawing.Color.Transparent;
             this.lblNhapLaiMKMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -286,6 +304,7 @@
             // 
             // txtMKMoi
             // 
+            this.txtMKMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMKMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMKMoi.Location = new System.Drawing.Point(428, 81);
             this.txtMKMoi.Name = "txtMKMoi";
@@ -295,6 +314,7 @@
             // 
             // lblMKMoi
             // 
+            this.lblMKMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMKMoi.AutoSize = true;
             this.lblMKMoi.BackColor = System.Drawing.Color.Transparent;
             this.lblMKMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -307,6 +327,7 @@
             // 
             // txtMKCu
             // 
+            this.txtMKCu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMKCu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMKCu.Location = new System.Drawing.Point(428, 37);
             this.txtMKCu.Name = "txtMKCu";
@@ -316,6 +337,7 @@
             // 
             // lblMKCu
             // 
+            this.lblMKCu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMKCu.AutoSize = true;
             this.lblMKCu.BackColor = System.Drawing.Color.Transparent;
             this.lblMKCu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -328,8 +350,8 @@
             // 
             // TuyChonUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.grpBoxTTMK);
             this.Controls.Add(this.grpBoxTTNV);

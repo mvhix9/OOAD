@@ -36,7 +36,7 @@
             // 
             // logoPicture
             // 
-            this.logoPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoPicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logoPicture.Image = ((System.Drawing.Image)(resources.GetObject("logoPicture.Image")));
             this.logoPicture.Location = new System.Drawing.Point(384, 227);
             this.logoPicture.Name = "logoPicture";
@@ -47,7 +47,7 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(107)))), ((int)(((byte)(174)))));
@@ -59,13 +59,15 @@
             // 
             // IndexUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.logoPicture);
             this.Name = "IndexUC";
             this.Size = new System.Drawing.Size(1007, 733);
+            this.Load += new System.EventHandler(this.IndexUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

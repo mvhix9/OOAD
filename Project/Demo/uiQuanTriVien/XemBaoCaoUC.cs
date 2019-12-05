@@ -25,6 +25,7 @@ namespace uiQuanTriVien
 
         private void XemBaoCaoUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             cbBaoCao.SelectedIndex = 0;
         }
 

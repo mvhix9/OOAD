@@ -25,7 +25,6 @@ namespace Demo
         public MainFRM()
         {
             InitializeComponent();
-            txtUsername.Focus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -97,9 +96,10 @@ namespace Demo
 
         private void msgError(string msg)
         {
-            lblError.Text = "     " + msg;
+            lblError.Text = "       " + msg;
             int left = (lblError.Parent.Width - lblError.Width) / 2;
-            centerLocation(lblError, left, 145);
+            //centerLocation(lblError, left, 145);
+            lblError.Left = left;
             lblError.Visible = true;
         }
 

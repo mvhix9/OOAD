@@ -26,6 +26,7 @@ namespace uiBacSi
 
         private void BacSiLapPhieuKhamUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             modelPhieuKhamBindingSource.DataSource = phieuKhamServices.GetModelUncompletedByIdDoctor(UserCache.Id);
             benhBindingSource.DataSource = benhServices.Find(b => b.TrangThai == 1).ToList();
         }

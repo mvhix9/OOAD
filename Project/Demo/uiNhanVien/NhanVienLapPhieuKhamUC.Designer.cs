@@ -200,6 +200,7 @@
             // 
             // grpBoxBN
             // 
+            this.grpBoxBN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpBoxBN.BackColor = System.Drawing.Color.Transparent;
             this.grpBoxBN.Controls.Add(this.txtGioiTinh);
             this.grpBoxBN.Controls.Add(this.txtMaBN);
@@ -345,6 +346,7 @@
             // 
             // grpBoxBS
             // 
+            this.grpBoxBS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.grpBoxBS.Controls.Add(this.lblDiaChiBS);
             this.grpBoxBS.Controls.Add(this.cbTenBacSi);
             this.grpBoxBS.Controls.Add(this.lblGioiTinhBS);
@@ -366,6 +368,7 @@
             // 
             // btnThemPhieuKham
             // 
+            this.btnThemPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThemPhieuKham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnThemPhieuKham.FlatAppearance.BorderSize = 0;
             this.btnThemPhieuKham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -381,6 +384,7 @@
             // 
             // btnSuaPhieuKham
             // 
+            this.btnSuaPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSuaPhieuKham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnSuaPhieuKham.FlatAppearance.BorderSize = 0;
             this.btnSuaPhieuKham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -400,6 +404,7 @@
             this.dtgvPhieuKham.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgvPhieuKham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvPhieuKham.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvPhieuKham.AutoGenerateColumns = false;
             this.dtgvPhieuKham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvPhieuKham.BackgroundColor = System.Drawing.Color.White;
@@ -487,6 +492,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTimKiem.Location = new System.Drawing.Point(70, 17);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -496,6 +502,7 @@
             // 
             // lbBoLoc
             // 
+            this.lbBoLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbBoLoc.AutoSize = true;
             this.lbBoLoc.BackColor = System.Drawing.Color.Transparent;
             this.lbBoLoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -508,6 +515,7 @@
             // 
             // btnLoc
             // 
+            this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.btnLoc.FlatAppearance.BorderSize = 0;
             this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -523,8 +531,8 @@
             // 
             // NhanVienLapPhieuKhamUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.txtTimKiem);

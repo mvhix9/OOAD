@@ -16,5 +16,10 @@ namespace Demo
         {
             InitializeComponent();
         }
+
+        private void IndexUC_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
     }
 }

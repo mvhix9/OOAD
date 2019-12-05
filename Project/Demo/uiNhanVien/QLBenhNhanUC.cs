@@ -26,6 +26,7 @@ namespace uiNhanVien
 
         private void QLBenhNhanUC_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             benhNhanBindingSource.DataSource = benhNhanServices.Find(bn => bn.TrangThai==1).ToList();
             
         }

@@ -65,15 +65,12 @@ namespace DAO
             switch (nv.MaVaiTro)
             {
                 case 1:
-                    UserCache.Role = "Nhân viên";
                     UserCache.RoleId = 1;
                     break;
                 case 2:
-                    UserCache.Role = "Bác sĩ";
                     UserCache.RoleId = 2;
                     break;
                 case 3:
-                    UserCache.Role = "Quản trị viên";
                     UserCache.RoleId = 3;
                     break;
             }
